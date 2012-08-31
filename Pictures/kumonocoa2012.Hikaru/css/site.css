@@ -1,0 +1,874 @@
+@charset "utf-8";
+.DefaultMainframe  {
+	height: 630px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.DefaultBackgroundV2 {
+	clear: both;
+	width: 100%;
+}
+
+.DefaultMainframe .DefaultMissionmenu  {
+	clear: both;
+	float: right;
+	height: 265px;
+	width: 100px;
+}
+.DefaultMainframe .DefaultMainmenu  {
+	float: right;
+	clear: both;
+	width: 360px;
+	height: 105px;
+	padding-right: 5px;
+}
+.DefaultMainframe .SilverlightLogo  {
+	float: right;
+	clear: both;
+	padding-right: 12px;
+}
+
+.DefaultMainmenu2   {
+	float: right;
+	clear: both;
+	padding-left: 10px;
+	width: 360px;
+	height: 125px;
+}
+.DefaultMainmenu2  .SL   {
+	height: 50px;
+	clear: both;
+}
+.DefaultMainmenu2  .Caution   {
+	clear: both;
+}
+.DefaultFooter   {
+	float: right;
+	width: 940px;
+	clear: both;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.InSidePageBackground {
+	background-image: url(../images/insidepage_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: auto;
+	width: 100%;
+	float: left;
+}
+.InSidePageBackground .InSidePageMainmenu {
+	height: 65px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	float: none;
+}
+.InSidePageBackground .InSidePageMainmenu .InSideMainmenu {
+	float: right;
+	width: 750px;
+	padding-top: 15px;
+}
+.InSidePageBackground .InSidePageMainmenu .InSideMainmenu .BtnTab {
+	float: right;
+	height: auto;
+	width: auto;
+	padding-left: 15px;
+	padding-top: 17px;
+}
+
+.InSidePageBackground .InSidePageFooter {
+	background-image: url(../images/footer_bg.png);
+	background-repeat: no-repeat;
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 52px;
+	padding-left: 10px;
+	padding-top: 7px;
+	padding-right: 10px;
+	padding-bottom: 25px;
+	clear: both;
+	float: none;
+}
+.DesktopGrid   {
+	clear: both;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../images/white_bg.png);
+	background-position: center 70px;
+	background-repeat: no-repeat;
+}
+
+.InSidePageBackground .CollectionTitle {
+	height: 40px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 30px;
+	padding-left: 60px;
+	clear: both;
+}
+.InSidePageBackground .CollectionTitle2 {
+	height: 40px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 60px;
+	clear: both;
+}
+.InSidePageBackground .CollectionDesktop {
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 60px;
+	float: left;
+	padding-top: 10px;
+}
+
+
+/********追加分********/
+.InSidePageBackground .CollectionDesktop .DesktopFromTop {
+	height: 376px;
+	padding-bottom: 20px;
+	padding-top: 25px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFromTop .DesktopPic {
+	float: left;
+	height: auto;
+	width: auto;
+	border: 1px solid #FFFFFF;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFromTop .SizeBtn {
+	width: 200px;
+	float: left;
+	padding-left: 40px;
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFromTop .SizeTitle {
+	width: 200px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+/********追加分********/
+
+.InSidePageBackground .CollectionDesktop .DesktopFrom {
+	float: left;
+	height: 183px;
+	width: 425px;
+	padding-right: 15px;
+	padding-bottom: 20px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .DesktopPic {
+	float: left;
+	height: auto;
+	width: auto;
+	border: 1px solid #FFFFFF;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .DesktopPicWP {
+	float: left;
+	height: auto;
+	width: auto;
+	padding-left: 15px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeTitle {
+	width: 120px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeBtn {
+	width: 90px;
+	float: left;
+	padding-left: 40px;
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeTitleWP {
+	width: 250px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeBtnWP {
+	width: 90px;
+	float: left;
+	padding-left: 40px;
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom2 {
+	float: left;
+	height: 300px;
+	padding-right: 15px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	width: 295px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom2 .SizeTitle {
+	width: 120px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom2 .SizeBtn {
+	width: 90px;
+	float: left;
+	padding-left: 30px;
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 2px 3px;
+	padding-top: 10px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 {
+	float: left;
+	padding-top: 20px;
+	width: 250px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 .SizeTitleWP  {
+	float: left;
+	padding-bottom: 10px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 .DesktopPicWP {
+	float: left;
+	padding-bottom: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 .SizeBtnWP {
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 3px 3px;
+	padding-top: 10px;
+	float: left;
+	padding-left: 35px;
+	width: 90px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom4 {
+	float: left;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	clear: left;
+	height: 360px;
+	width: 600px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom4 .DesktopPic {
+	float: left;
+	height: auto;
+	width: 292px;
+	border: 1px solid #FFFFFF;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom4 .SizeTitle {
+	width: 120px;
+	padding-left: 10px;
+	padding-top: 5px;
+	float: left;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom4 .SizeBtn {
+	width: 90px;
+	padding-left: 40px;
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+	float: left;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom5 {
+	float: left;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	height: 370px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom5 .DesktopPic {
+	float: left;
+	height: auto;
+	border: 1px solid #FFFFFF;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom5 .SizeTitle {
+	width: 200px;
+	padding-left: 10px;
+	padding-top: 5px;
+	float: left;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom5 .SizeBtn {
+	width: 180px;
+	padding-left: 40px;
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+	float: left;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom6 {
+	float: left;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	padding-right: 10px;
+	height: 370px;
+	width: 250px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom6 .DesktopPic {
+	float: left;
+	height: auto;
+	border: 1px solid #FFFFFF;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom6 .SizeTitle {
+	width: 200px;
+	padding-left: 10px;
+	padding-top: 5px;
+	float: left;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom6 .SizeBtn {
+	width: 180px;
+	padding-left: 40px;
+	background-image: url(../images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+	float: left;
+}
+.InSidePageBackground .MissionTitle {
+	height: 50px;
+	width: 880px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+	padding-left: 80px;
+}
+
+.InSidePageBackground .MissionPoster {
+	height: 1120px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+
+
+.InSidePageBackground .MissionTech2011 {
+	width: 880px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	padding-left: 80px;
+	padding-top: 40px;
+	padding-bottom: 30px;
+}
+
+.InSidePageBackground .AppliTitle {
+	width: 880px;
+	padding-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 80px;
+	padding-bottom: 10px;
+	clear: both;
+}
+.InSidePageBackground .AppliContent {
+	height: 2050px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground  .AppliContent .AppliIntro {
+	background-image: url(../images/application_intro.png);
+	background-repeat: no-repeat;
+	height: 450px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.InSidePageBackground  .AppliContent .AppliDL {
+	height: 200px;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .APP {
+	height: 200px;
+	width: 250px;
+	float: left;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .APPNotice {
+	float: right;
+	width: 520px;
+	height: 200px;
+}
+.InSidePageBackground  .AppliContent  .AppliDL  .APPNotice .Content {
+	height: 145px;
+	width: 520px;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .AppliStepTitle {
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	height: 20px;
+	clear: both;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .AppliStepContent {
+	clear: both;
+	height: auto;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+	.InSidePageBackground  .AppliContent  .AppliDL .AppliStepContent .uso {
+		font-size: 11px;
+		color: #666;
+	}
+
+.InSidePageBackground .ShareContent {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+	clear: both;
+	height: 1850px;
+}
+.InSidePageBackground .ShareContent .Title {
+	clear: both;
+	padding-bottom: 10px;
+	padding-left: 50px;
+	padding-top: 20px;
+}
+.InSidePageBackground .ShareContent .Tshirt {
+	float: left;
+	height: 87px;
+	width: 255px;
+	background-image: url(../images/blog_stick_event.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding-top: 263px;
+	padding-left: 705px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FF0000;
+	font-size: 24px;
+}
+
+.InSidePageBackground .ShareContent .BlogStickFrom {
+	width: 860px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground  .ShareContent  .BlogStickFrom  .BlogStick1 {
+	width: 410px;
+	padding-top: 20px;
+	float: left;
+	background-image: url(../images/blog_stick_code_clock.png);
+	background-repeat: no-repeat;
+	padding-right: 20px;
+	background-position: 180px 48px;
+}
+.InSidePageBackground  .ShareContent  .BlogStickFrom  .BlogStick2 {
+	width: 410px;
+	padding-top: 20px;
+	float: left;
+	background-image: url(../images/blog_stick_code_text.png);
+	background-repeat: no-repeat;
+	background-position: 180px 48px;
+}
+.InSidePageBackground   .ShareContent   .BlogStickFrom   .Name  {
+	padding-bottom: 5px;
+	padding-left: 4px;
+}
+.InSidePageBackground   .ShareContent   .BlogStickFrom   .SL  {
+	height: 250px;
+	width: 160px;
+	border: 1px solid #6bdddd;
+	margin-left: 3px;
+}
+.InSidePageBackground   .ShareContent   .BlogStickFrom   .NonSL  {
+	border: 1px solid 6eb8db;
+	height: 250px;
+	width: 160px;
+	margin-left: 3px;
+}
+.InSidePageBackground   .ShareContent   .BlogStickFrom   .Btn  {
+	padding-top: 10px;
+}
+
+
+
+
+
+.Sepline   {
+	background-image: url(../images/sepline.png);
+	background-repeat: no-repeat;
+	height: 10px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	background-position: center center;
+}
+.UIsepline    {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: right;
+	width: 860%;
+	height: 7px;
+	margin-right: auto;
+	margin-left: auto;
+	float: left;
+}
+.UIsepline2    {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	clear: both;
+	height: 7px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+
+
+.SilverlightLogo {
+	height: auto;
+	width: auto;
+	float: left;
+	clear: left;
+	padding-top: 15px;
+}
+
+
+.Copyright {
+	float: left;
+	height: auto;
+	width: 570px;
+}
+.Social   {
+	float: left;
+	width: 100px;
+	padding-top: 3px;
+}
+.MicrosoftLogo {
+	float: right;
+	padding-top: 3px;
+	padding-right: 15px;
+}
+.InSidePageBackground .Resources {
+	height: 1380px;
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+}
+.InSidePageBackground  .Resources  .Intro {
+	height: 270px;
+	width: 850px;
+	background-image: url(../images/resource_intro.png);
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground   .Resources   .Intro   .DownloadSL {
+	float: left;
+	padding-top: 186px;
+}
+.InSidePageBackground .Resources .Intro .TestSL {
+	float: right;
+	height: 246px;
+	width: 290px;
+}
+
+.InSidePageBackground .Resources .Intro .TestSL .SL {
+	height: 190px;
+	width: 275px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground .Resources .Intro .TestSL .TestBtn {
+	height: 56px;
+	width: 290px;
+}
+.InSidePageBackground .Resources .HikiTV {
+	height: 550px;
+	width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(../images/resources_hikitv_bg.png);
+	background-repeat: no-repeat;
+}
+.InSidePageBackground .Resources .HikiTV .Btn {
+	height: 50px;
+	padding-top: 10px;
+	padding-left: 280px;
+}
+
+.InSidePageBackground .Resources .HikiTV .Video {
+	width: 570px;
+	height: 380px;
+	padding-top: 44px;
+	padding-left: 136px;
+}
+.InSidePageBackground .Resources .HikiTV .Pic {
+	height: 380px;
+	width: 570px;
+	padding-top: 104px;
+	padding-left: 136px;
+}
+
+
+
+
+
+
+.InSidePageBackground .Resources .content {
+	height: 520px;
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	background-image: url(../images/resource_content_bg.png);
+	background-repeat: no-repeat;
+	background-position: center 165px;
+}
+.InSidePageBackground    .Resources    .content    .resourcetitle  {
+	background-image: url(../images/resource_title.png);
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground   .Resources   .content   .resourcetab  {
+	width: 850px;
+	clear: both;
+	height: 180px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground    .Resources    .content    .resourcetab   .resource  {
+	float: left;
+	width: 850px;
+	height: 70px;
+	padding-top: 10px;
+}
+.InSidePageBackground .Resources .content .communitytab {
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 270px;
+	padding-top: 20px;
+}
+.InSidePageBackground .Resources .content .communitytab .community {
+	width: 300px;
+	height: auto;
+	float: left;
+}
+.InSidePageBackground .Resources .content .communitytab .community .linktab {
+	height: 33px;
+	width: 300px;
+	padding-top: 10px;
+}
+.InSidePageBackground .Resources .content .communitytab .community .linktab .icon {
+	float: left;
+	height: 33px;
+	width: 32px;
+}
+.InSidePageBackground .Resources .content .communitytab .community .linktab .link {
+	height: 26px;
+	width: auto;
+	padding-top: 7px;
+}
+
+
+.Desktop {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.FooterStyle {
+	font-size: 11px;
+	line-height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-decoration: none;
+}
+.FooterStyle a:link{
+	color: #0eb594;
+	text-decoration: none;
+}
+.FooterStyle a:visited{
+	color: #0eb594;
+	text-decoration: none;
+}
+.FooterStyle a:hover{
+	color: #0eb594;
+	text-decoration: underline;
+}
+.FooterStyle a:active{
+	color: #0eb594;
+	text-decoration: none;
+}
+.FooterHalloweenStyle {
+	font-size: 11px;
+	line-height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+}
+.FooterHalloweenStyle a:link{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.FooterHalloweenStyle a:visited{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.FooterHalloweenStyle a:hover{
+	color: #333333;
+	text-decoration: underline;
+}
+.FooterHalloweenStyle a:active{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.CommunityStyle {
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+	font-weight: bold;
+}
+.CommunityStyle a:link{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+	font-weight: bold;
+}
+.CommunityStyle a:visited{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+	font-weight: bold;
+}
+.CommunityStyle a:hover{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.CommunityStyle a:active{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle {
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle a:link{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle a:visited{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #39A8EA;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle a:hover{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.DesktopStyle a:active{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+	font-weight: bold;
+}
+.AppliStyle {
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+	line-height: 20px;
+}
+.AppliStyle a:link{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+}
+.AppliStyle a:visited{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+}
+.AppliStyle a:hover{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: underline;
+}
+.AppliStyle a:active{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #0eb594;
+	text-decoration: none;
+}
+.HalloweenStyle {
+	font-size: 12px;
+	line-height: 26px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.HalloweenStyle a:link{
+	color: #009cff;
+	text-decoration: none;
+}
+.HalloweenStyle a:visited{
+	color: #009cff;
+	text-decoration: none;
+}
+.HalloweenStyle a:hover{
+	color: #009cff;
+	text-decoration: underline;
+}
+.HalloweenStyle a:active{
+	color: #666666;
+	text-decoration: none;
+}

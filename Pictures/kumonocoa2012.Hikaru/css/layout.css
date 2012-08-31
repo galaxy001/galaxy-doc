@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+
+/********************************
+ヘッダー
+*********************************/
+
+
+/********************************
+コンテンツ
+*********************************/
+
+
+/********************************
+フッター
+*********************************/
+
+#footer {
+	width: 940px;
+	padding: 10px 10px 0 10px;
+	margin: 0 auto;
+}
+	#footer .social {
+		width: 100px;
+		float: left;
+		padding-top: 3px;
+	}
+	#footer .copyright {
+		font-size: 11px;
+		float: left;
+		width: 570px;
+		line-height: 18px;
+	}
+	#footer .footlogo {
+		float: right;
+		padding: 3px 15px 0 0;
+	}
+
+/********************************
+トップページ
+*********************************/
+
+#topBox {
+	width: 960px;
+	height: 630px;
+	margin: 0 auto;
+}
+	#topBox h1 {
+		float: right;
+		padding: 15px 12px 0 0;
+	}
+	#topBox .mainmenu {
+		width: 360px;
+		height: 105px;
+		padding: 265px 5px 0 595px;
+		clear: both;
+	}
+	#topBox .mainmenu2 {
+		width: 360px;
+		height: 125px;
+		padding: 0 0 0 600px;
+	}
+		#topBox .mainmenu2 .voice {
+			height: 50px;
+		}
+		#topBox .mainmenu2 .caution {
+			font-size: 12px;
+		}
+		
+a#copy-desc:link,
+a#copy-desc:visited
+ {
+	background: url(../images/btnsource.png) 0 0 no-repeat;
+	width: 144px;
+	height: 44px;
+	text-indent: -99999px;
+	display: block;
+}
+
+a#copy-desc:hover,
+a#copy-desc:active
+ {
+	background: url(../images/btnsource_on.png) 0 0 no-repeat;
+	width: 144px;
+	height: 44px;
+	text-indent: -99999px;
+	display: block;
+}
+
+a#copy-descr:link,
+a#copy-descr:visited
+ {
+	background: url(../images/btnsource.png) 0 0 no-repeat;
+	width: 144px;
+	height: 44px;
+	text-indent: -99999px;
+	display: block;
+}
+
+a#copy-descr:hover,
+a#copy-descr:active
+ {
+	background: url(../images/btnsource_on.png) 0 0 no-repeat;
+	width: 144px;
+	height: 44px;
+	text-indent: -99999px;
+	display: block;
+}
+.Btn .para {display: none;}

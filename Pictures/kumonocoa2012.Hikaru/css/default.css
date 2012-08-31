@@ -1,0 +1,342 @@
+@charset "UTF-8";
+/* フォントサイズ設定----------------
+
+	http://peopletown.jp	2007-05-07
+	
+	対応ブラウザ(standard mode)
+	Mac	IE5,Safari,Firefox,Opera
+	Win	IE6,IE7,Firefox,Opera
+	
+	 9px =	56.25%	|	25px = 156.25%
+	10px =	62.5%	|	26px = 162.25%
+	11px =	66.66%	|	27px = 168.75%					
+	12px =	75%		|	28px = 175%	
+	13px =	81.25%	|	29px = 181.25%
+	14px =	87.5%	|	30px = 187.5%
+	15px =	93.75%	|	31px = 193.75%
+	16px =	100%	|	32px = 200%
+	17px = 106.25%	|	33px = 206.25%
+	18px = 112.5%	|	34px = 212.5%
+	19px = 118.75%	|	35px = 218.75%
+	20px = 125%		|	36px = 225%
+	21px = 131.25%	|
+	22px = 137.5%	| 48px = 300%
+	23px = 143.75%	|	72px = 450%
+	24px = 150%		|
+
+*/
+
+/* IE only */
+body {
+	font-family:'ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック','Osaka','メイリオ','Meiryo',sans-serif;
+	line-height: 1.4;
+	font-size: 12px;
+	color:#666666;
+	background: url(../images/default.png) center top no-repeat #f4f9fc;
+}
+
+/* for safari */
+/*\*/
+html:\66irst-child body {
+ font-size: 11px;
+}
+/* end */
+
+
+
+/*IEとそれ以外でサイズが違うのを揃える*/
+
+
+/*-----フォントサイズ設定ここまで-----*/
+
+
+/*各要素の幅リセット*/
+body,div,dl,dt,dd,ul,ol,li,p,pre,form,fieldset,blockquote,p,address{
+	margin:0px;
+	padding:0px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal;
+	margin:0;
+	padding:0;
+}
+
+td,th {
+	font-size:12px;
+	line-height:1.5em;
+	font-weight:normal;
+}
+
+address{
+font-style:normal;
+}
+
+/*画像ボーダーオフ*/
+img {
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+
+/*テーブルボーダーcollapse、フォントサイズ継承*/
+table {
+	border-collapse:collapse;
+	font-size:inherit;
+}
+
+hr {
+	display:none;
+}
+
+ul,li {
+	list-style:none;
+}
+
+/*--クリアフィックス--*/
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+		font-size:.01em;
+		height:0;
+		overflow:hidden;
+}
+.clearfix {
+  min-height: 1px;
+}
+* html .clearfix {
+	height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+
+
+
+/*フロート・クリアーボックス*/
+.clear {
+	clear:both;
+}
+
+
+.sectionLeft {float: left;}
+.sectionRight {float: right;}
+.textLeft {text-align: left;}
+.textRight {text-align: right;}
+.textCenter {text-align: center;}
+
+/*基本リンク設定*/
+
+a,
+a:link,
+a:visited {
+	color:#0eb594;
+	text-decoration:none;
+}
+
+a:hover,
+a:active {
+	color: #0eb594;
+	text-decoration:underline;
+}
+
+a.gray,
+a.gray:link,
+a.gray:visited {
+	color:#0eb594;
+	text-decoration:none;
+}
+
+a.gray:hover,
+a.gray:active {
+	color: #0eb594;
+	text-decoration:underline;
+}
+
+
+
+/*スペース設定----------------*/
+.space0 {
+	width:0px;
+	height:0px;
+	font-size:0px;
+	line-height:0px;
+}
+
+.m_b1 {
+	margin-bottom:1px !important;
+}
+
+.m_b5 {
+	margin-bottom:5px !important;
+}
+
+.m_b7 {
+	margin-bottom:7px !important;
+}
+
+.m_b8 {
+	margin-bottom:8px !important;
+}
+
+.m_b10 {
+	margin-bottom:10px !important;
+}
+
+.m_b12 {
+	margin-bottom:12px !important;
+}
+
+.m_b13 {
+	margin-bottom:13px !important;
+}
+
+.m_b15 {
+	margin-bottom:15px !important;
+}
+
+.m_b20 {
+	margin-bottom:20px !important;
+}
+
+.m_b25 {
+	margin-bottom:25px !important;
+}
+
+.m_b30 {
+	margin-bottom:30px !important;
+}
+
+.m_b35 {
+	margin-bottom:35px !important;
+}
+
+.m_b40 {
+	margin-bottom:40px !important;
+}
+
+.m_b45 {
+	margin-bottom:45px !important;
+}
+
+.m_b50 {
+	margin-bottom:50px !important;
+}
+
+
+
+.p_b15 {
+	padding-bottom:15px !important;
+}
+
+
+.p_b40 {
+	padding-bottom:40px !important;
+}
+
+
+
+
+
+
+
+.t_b1 {
+	margin-top:1px;
+}
+
+.m_t5 {
+	margin-top:5px;
+}
+
+.m_t7 {
+	margin-top:7px;
+}
+
+.m_t8 {
+	margin-top:8px;
+}
+
+.m_t10 {
+	margin-top:10px;
+}
+
+.m_t12 {
+	margin-top:12px;
+}
+
+.m_t13 {
+	margin-top:13px;
+}
+
+.m_t15 {
+	margin-top:15px;
+}
+
+.m_t20 {
+	margin-top:20px;
+}
+
+.m_t25 {
+	margin-top:25px;
+}
+
+.m_t30 {
+	margin-top:30px;
+}
+
+.m_t35 {
+	margin-top:35px;
+}
+
+.m_t40 {
+	margin-top:40px;
+}
+
+.m_t45 {
+	margin-top:45px;
+}
+
+.m_t50 {
+	margin-top:50px;
+}
+
+
+
+.p_t15 {
+	padding-bottom:15px;
+}
+
+
+.p_t40 {
+	padding-top:40px;
+}
+
+.m_t10_b10 {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+
+.m_t20_b10 {
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.m_t5_b10 {
+	margin-top:5px;
+	margin-bottom:10px;
+}
+
+.m_t25_b25 {
+	margin-top:25px;
+	margin-bottom:25px;
+}
+
+.underline {
+	text-decoration: underline !important;
+}
