@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -10,12 +10,12 @@
 <meta name="WT.z_ea_name" content="taiwan_promo_SL-hikaru" />
 <meta name="WT.z_ea_actionoffer" content="Vue-Sit" />
 <title>Microsoft Silverlight 相關情報</title>
-<link href="microsoft_silverlight.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="belatedPNG.js"></script>
-<script type="text/javascript" src="Silverlight.js"></script>
+<link href="microsoft_silverlight.css" tppabs="http://www.microsoft.com/taiwan/silverlight/microsoft_silverlight.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="belatedPNG.js" tppabs="http://www.microsoft.com/taiwan/silverlight/belatedPNG.js"></script>
+<script type="text/javascript" src="Silverlight.js" tppabs="http://www.microsoft.com/taiwan/silverlight/Silverlight.js"></script>
 <style type="text/css">
 body {
-	background-image: url(images/full_background.jpg);
+	background-image: url("images/full_background.jpg")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/full_background.jpg*/;
 	background-repeat: repeat-x;
 	margin-left: 0px;
 	margin-top: 0px;
@@ -35,20 +35,20 @@ document.forms[0].q.value=getkey();
 			title = encodeURIComponent(title);
             var url = location.href + "?WT.mc_id=facebook";
 			url = encodeURIComponent(url);
-            var _href = "http://www.facebook.com/sharer.php?u=" + url + "&t=" + title;
+            var _href = "http://www.facebook.com/sharer.php?u= + url + "&t=" + title;
             window.open(_href, 'sharer','toolbar=0,status=0,width=650,height=420');
         }
 
         function fbs_Plurk() {
             var title = '藍澤光TV開播囉～小光自我介紹初登場！';
             var url = location.href + "?WT.mc_id=plurk";
-            void (window.open('http://www.plurk.com/?qualifier=shares&status='.concat(encodeURIComponent(url)).concat(' ').concat('(').concat(encodeURIComponent(title)).concat(')')));
+            void (window.open('http://www.plurk.com/?qualifier=shares&status=.concat(encodeURIComponent(url)).concat(' ').concat('(').concat(encodeURIComponent(title)).concat(')')));
         }
 
         function fbs_Twitter() {
             var title = '藍澤光TV開播囉～小光自我介紹初登場！';
             var url = location.href;
-            void (window.open('http://twitter.com/home/?status='.concat(encodeURIComponent(title)).concat(' ').concat(encodeURIComponent(url))));
+            void (window.open('http://twitter.com/home/?status=.concat(encodeURIComponent(title)).concat(' ').concat(encodeURIComponent(url))));
         }
 		function fbs_Msn(){window.open('https://favorites.live.com/quickadd.aspx?marklet=0&mkt=zh-tw&url='+ encodeURIComponent(window.location.href)+'&title='+encodeURI("Silverlight新世紀 – 藍澤光之章"), 'PopUp', 'scrollbars=no, width=500, height=450')}
 
@@ -56,12 +56,12 @@ document.forms[0].q.value=getkey();
 		    var slTestId = document.getElementById("slTestId");
 		    if (Silverlight.isInstalled()) {
 		        if (Silverlight.isInstalled("4.0.50826.0")) {
-		            slTestId.innerHTML = '<object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="275" height="190"><param name="source" value="ClientBin/test_movie.xap"/><param name="onerror" value="onSilverlightError" /><param name="background" value="white" /><param name="minRuntimeVersion" value="4.0.50826.0" /><param name="autoUpgrade" value="true" /></object>';
+		            slTestId.innerHTML = '<object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="275" height="190"><param name="source" value="ClientBin/test_movie.xap"/*tpa=http://www.microsoft.com/taiwan/silverlight/ClientBin/test_movie.xap*//><param name="onerror" value="onSilverlightError" /><param name="background" value="white" /><param name="minRuntimeVersion" value="4.0.50826.0" /><param name="autoUpgrade" value="true" /></object>';
                 } else {
-		            slTestId.innerHTML = '<img src="images/resources_install3.png" width="275" height="190" />';
+		            slTestId.innerHTML = '<img src="images/resources_install3.png"/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resources_install3.png*/ width="275" height="190" />';
 		        }
 		    } else {
-		        slTestId.innerHTML = '<img src="images/resources_install2.png" width="275" height="190" />';
+		        slTestId.innerHTML = '<img src="images/resources_install2.png"/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resources_install2.png*/ width="275" height="190" />';
 		    }
 		}
 		function isInstalledSilverlight2() {
@@ -71,16 +71,16 @@ document.forms[0].q.value=getkey();
 		    var slTestId2 = document.getElementById("Pic");
 		    if (Silverlight.isInstalled()) {
 		        if (Silverlight.isInstalled("4.0.50826.0")) {
-		            //slTestId.innerHTML = '<object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="275" height="190"><param name="source" value="ClientBin/test_movie.xap"/><param name="onerror" value="onSilverlightError" /><param name="background" value="white" /><param name="minRuntimeVersion" value="4.0.50826.0" /><param name="autoUpgrade" value="true" /></object>';
+		            //slTestId.innerHTML = '<object data="data:application/x-silverlight-2," type="application/x-silverlight-2" width="275" height="190"><param name="source" value="ClientBin/test_movie.xap"/*tpa=http://www.microsoft.com/taiwan/silverlight/ClientBin/test_movie.xap*//><param name="onerror" value="onSilverlightError" /><param name="background" value="white" /><param name="minRuntimeVersion" value="4.0.50826.0" /><param name="autoUpgrade" value="true" /></object>';
 		            slTestId2.style.display = "none";
 		        } else {
-		            //slTestId.innerHTML = '<img src="images/resources_install3.png" width="275" height="190" />';
+		            //slTestId.innerHTML = '<img src="images/resources_install3.png"/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resources_install3.png*/ width="275" height="190" />';
 		            slTestId.style.display = "none";
 		            slTestId2.style.display = "block";
 		        }
 		    } else {
 
-		        //slTestId.innerHTML = '<img src="images/resources_install2.png" width="275" height="190" />';
+		        //slTestId.innerHTML = '<img src="images/resources_install2.png"/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resources_install2.png*/ width="275" height="190" />';
 		        slTestId.style.display = "none";
 		        slTestId2.style.display = "block";
 		    }
@@ -157,11 +157,11 @@ function MM_swapImage() { //v3.0
     </script>
 </head>
 
-<body onload="MM_preloadImages('images/inside_mainmenu0_2.png','images/inside_mainmenu1_2.png','images/inside_mainmenu4_2.png','images/inside_mainmenu3_2.png','images/fb_icon_2.png','images/tw_icon_2.png','images/pl_icon_2.png','images/inside_mainmenu2_2.png','images/resource_movie1_2.png','images/resource_movie2_2.png')">
+<body onload="MM_preloadImages('images/inside_mainmenu0_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu0_2.png*/,'images/inside_mainmenu1_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu1_2.png*/,'images/inside_mainmenu4_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu4_2.png*/,'images/inside_mainmenu3_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu3_2.png*/,'images/fb_icon_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/fb_icon_2.png*/,'images/tw_icon_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/tw_icon_2.png*/,'images/pl_icon_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/pl_icon_2.png*/,'images/inside_mainmenu2_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu2_2.png*/,'images/resource_movie1_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resource_movie1_2.png*/,'images/resource_movie2_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resource_movie2_2.png*/)">
 <!-- START OF SmartSource Data Collector TAG -->
 <!-- Copyright (c) 1996-2009 WebTrends Inc.  All rights reserved. -->
 <!-- Version: MS.3.0.0 -->
-<script src="http://js.microsoft.com/library/mnp/2/wt/js/wt.js" type="text/javascript"></script>
+<script src="../../../js.microsoft.com/library/mnp/2/wt/js/wt.js" tppabs="http://js.microsoft.com/library/mnp/2/wt/js/wt.js" type="text/javascript"></script>
 
 <!-- ----------------------------------------------------------------------------------- -->
 <!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
@@ -171,7 +171,7 @@ function MM_swapImage() { //v3.0
 //<![CDATA[
 var _tag=new WebTrends();
 _tag.dcsid="dcsjwb9vb00000c932fd0rjc7_5p3t";
-// _tag.fpcdom=".domain.com";
+// _tag.fpcdom=".domain.com.htm"/*tpa=http://www.microsoft.com/taiwan/silverlight/.domain.com*/;
 _tag.dcsGetId();
 _tag.trackevents=true;
 //]]>>
@@ -186,101 +186,100 @@ _tag.dcsCollect();
 </script>
 
 <noscript>
-<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="http://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&amp;WT.js=No&amp;WT.tv=MS.3.0.0"/></div>
+<div><img alt="DCSIMG" id="DCSIMG" width="1" height="1" src="../../../m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif-dcsredirect=126&dcstlh=0&dcstlv=0&dcsuri=-nojavascript&WT.js=No&WT.tv=MS.3.0.0.gif" tppabs="http://m.webtrends.com/dcsjwb9vb00000c932fd0rjc7_5p3t/njs.gif?dcsuri=/nojavascript&WT.js=No&WT.tv=MS.3.0.0"/></div>
 </noscript>
 <!-- END OF SmartSource Data Collector TAG -->
 <div class="InSidePageBackground">
   <div class="InSidePageMainmenu">
-    <div class="SilverlightLogo"><img src="images/silverlight_logo.png" /></div>
+    <div class="SilverlightLogo"><img src="images/silverlight_logo.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/silverlight_logo.png" /></div>
     <div class="InSideMainmenu">
-      <div class="BtnTab"><a href="resources.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','images/inside_mainmenu4_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Resources::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu4_1.png" name="Image9" width="135" height="27" border="0" id="Image9" /></a></div>
-      <div class="BtnTab"><a href="toybox.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image33','','images/inside_mainmenu3_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Toybox::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu3_1.png" name="Image33" width="135" height="27" border="0" id="Image33" /></a></div>
-      <div class="BtnTab"><a href="share.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image47','','images/inside_mainmenu2_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Share::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu2_1.png" name="Image47" width="135" height="27" border="0" id="Image47" /></a></div>
-      <div class="BtnTab"><a href="collection.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','images/inside_mainmenu1_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Collection::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu1_1.png" name="Image28" width="135" height="27" border="0" id="Image28" /></a></div>
-      <div class="BtnTab"><a href="default.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/inside_mainmenu0_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Backtohome::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu0_1.png" name="Image7" width="120" height="27" border="0" id="Image7" /></a></div>
+      <div class="BtnTab"><a href="resources.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/resources.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image9','','images/inside_mainmenu4_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu4_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Resources::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu4_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu4_1.png" name="Image9" width="135" height="27" border="0" id="Image9" /></a></div>
+      <div class="BtnTab"><a href="toybox.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/toybox.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image33','','images/inside_mainmenu3_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu3_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Toybox::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu3_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu3_1.png" name="Image33" width="135" height="27" border="0" id="Image33" /></a></div>
+      <div class="BtnTab"><a href="share-1.aspx.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/share.aspx" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image47','','images/inside_mainmenu2_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu2_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Share::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu2_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu2_1.png" name="Image47" width="135" height="27" border="0" id="Image47" /></a></div>
+      <div class="BtnTab"><a href="collection.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/collection.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image28','','images/inside_mainmenu1_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu1_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Collection::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu1_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu1_1.png" name="Image28" width="135" height="27" border="0" id="Image28" /></a></div>
+      <div class="BtnTab"><a href="default.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/default.htm" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','images/inside_mainmenu0_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu0_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Backtohome::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/inside_mainmenu0_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/inside_mainmenu0_1.png" name="Image7" width="120" height="27" border="0" id="Image7" /></a></div>
     </div>
   </div>
   <div class="Resources">
     <div class="Intro">
-      <div class="DownloadSL"><a href="http://go.microsoft.com/fwlink/?LinkId=149156
-" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Dwn_SilverlightPC::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_dwnSL.png" border="0" /></a><a href="http://go.microsoft.com/fwlink/?LinkId=149156" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Dwn_SilverlightMAC::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_dwnSLmac.png" width="271" height="56" border="0" /></a></div>
+      <div class="DownloadSL"><a href="../../../go.microsoft.com/fwlink/-LinkId=149156" tppabs="http://go.microsoft.com/fwlink/?LinkId=149156" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Dwn_SilverlightPC::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_dwnSL.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/resource_dwnSL.png" border="0" /></a><a href="../../../go.microsoft.com/fwlink/-LinkId=149156" tppabs="http://go.microsoft.com/fwlink/?LinkId=149156" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Dwn_SilverlightMAC::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_dwnSLmac.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/resource_dwnSLmac.png" width="271" height="56" border="0" /></a></div>
       <div class="TestSL">
-        <div class="SL" id="slTestId"><img src="images/resources_install1.png" width="275" height="190" /></div>
-        <div class="TestBtn"><a href="javascript:;" onclick="isInstalledSilverlight();"><img style="border:0;" src="images/resource_testSL.png" /></a></div>
+        <div class="SL" id="slTestId"><img src="images/resources_install1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/resources_install1.png" width="275" height="190" /></div>
+        <div class="TestBtn"><a href="javascript:;" onclick="isInstalledSilverlight();"><img style="border:0;" src="images/resource_testSL.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/resource_testSL.png" /></a></div>
       </div>
     </div>
     <div class="Sepline"></div>
     <div class="HikiTV">
-      <div class="Btn"><a href="resources_movie1.htm" target="imovie" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image34','','images/resource_movie1_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Resources_movie1::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_movie1_1.png" name="Image34" width="211" height="49" border="0" id="Image34" /></a><a href="resources_movie2.htm" target="imovie" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image35','','images/resource_movie2_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Resources_movie2::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_movie2_1.png" name="Image35" width="273" height="49" border="0" id="Image35" /></a></div>
+      <div class="Btn"><a href="resources_movie1.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/resources_movie1.htm" target="imovie" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image34','','images/resource_movie1_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resource_movie1_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Resources_movie1::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_movie1_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/resource_movie1_1.png" name="Image34" width="211" height="49" border="0" id="Image34" /></a><a href="resources_movie2.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/resources_movie2.htm" target="imovie" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image35','','images/resource_movie2_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resource_movie2_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Resources_movie2::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/resource_movie2_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/resource_movie2_1.png" name="Image35" width="273" height="49" border="0" id="Image35" /></a></div>
       <div class="Video">
-        <iframe src="resources_movie1.htm" name="imovie" width="570" marginwidth="1" height="380" marginheight="1" align="center" scrolling="No" frameborder="0" id="imovie" allowtransparency="true" framespacing="0" noresize="noResize" valign="top" vspale="0"></iframe>
+        <iframe src="resources_movie1.htm" tppabs="http://www.microsoft.com/taiwan/silverlight/resources_movie1.htm" name="imovie" width="570" marginwidth="1" height="380" marginheight="1" align="center" scrolling="No" frameborder="0" id="imovie" allowtransparency="true" framespacing="0" noresize="noResize" valign="top" vspale="0"></iframe>
       </div>
     </div>
     <div class="Sepline"></div>
     <div class="content">
       <div class="resourcetitle"></div>
           <div class="resourcetab">
-          <div class="resource"><a href="http://www.microsoft.com/taiwan/expression/ " target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Microsoft_Expression::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-ms-expression.png" border="0" /></a><a href="http://www.microsoft.com/visualstudio/zh-tw/ " target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Visual_Studio::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-ms-visual-studio.png" border="0" /></a><a href="http://www.microsoft.com/windowsserver2008/en/us/default.aspx " target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Windows_Server_IIS7::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-win-server-iis-7.png" border="0" /></a><a href="http://www.asp.net/" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','MS_NET::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-dot-net-asp-net.png" border="0" /></a></div>
-          <div class="resource"><a href="http://www.microsoft.com/downloads/en/details.aspx?displaylang=en&amp;FamilyID=457b17b7-52bf-4bda-87a3-fa8a4673f8bf " target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Deep_Zoom_Composer::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-deep-zoom-composer.png" border="0" /></a><a href="http://www.microsoft.com/express/phone/ " target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','VS2010_for_WP::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo_vse2010-phone.png" border="0" /></a></div>
+          <div class="resource"><a href="http://www.microsoft.com/taiwan/expression/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Microsoft_Expression::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-ms-expression.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/logo-ms-expression.png" border="0" /></a><a href="http://www.microsoft.com/visualstudio/zh-tw/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Visual_Studio::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-ms-visual-studio.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/logo-ms-visual-studio.png" border="0" /></a><a href="http://www.microsoft.com/windowsserver2008/en/us/default.aspx"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Windows_Server_IIS7::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-win-server-iis-7.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/logo-win-server-iis-7.png" border="0" /></a><a href="http://www.asp.net/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','MS_NET::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-dot-net-asp-net.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/logo-dot-net-asp-net.png" border="0" /></a></div>
+          <div class="resource"><a href="http://www.microsoft.com/downloads/en/details.aspx?displaylang=en&FamilyID=457b17b7-52bf-4bda-87a3-fa8a4673f8bf"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Deep_Zoom_Composer::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo-deep-zoom-composer.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/logo-deep-zoom-composer.png" border="0" /></a><a href="http://www.microsoft.com/express/phone/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','VS2010_for_WP::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/logo_vse2010-phone.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/logo_vse2010-phone.png" border="0" /></a></div>
       </div>
         <div class="communitytab">
             <div class="community">
-              <div class="communitytitle"><img src="images/community_title1.png" width="132" height="22" /></div>
+              <div class="communitytitle"><img src="images/community_title1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/community_title1.png" width="132" height="22" /></div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://www.microsoft.com/silverlight/features/" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Silverlight_Features::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Silverlight Features</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://www.microsoft.com/silverlight/features/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Silverlight_Features::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Silverlight Features</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://developer.windowsphone.com/" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Windows_Phone::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Windows Phone</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://developer.windowsphone.com/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Windows_Phone::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Windows Phone</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://www.silverlight.net/learn/pivotviewer/" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','PivotViewer_Control::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">PivotViewer Control</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://www.silverlight.net/learn/pivotviewer/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','PivotViewer_Control::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">PivotViewer Control</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://msdn.microsoft.com/en-us/library/cc838192(VS.95).aspx" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Silverlight_DRM_Overview::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Silverlight DRM Overview</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://msdn.microsoft.com/en-us/library/cc838192(VS.95).aspx"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Silverlight_DRM_Overview::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Silverlight DRM Overview</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://team.silverlight.net/related-products/iis-smooth-streaming-player-development-kit-beta-2-released/" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','IIS_Player_Development_kit::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">IIS Smooth Streaming Player <br />
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://team.silverlight.net/related-products/iis-smooth-streaming-player-development-kit-beta-2-released/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','IIS_Player_Development_kit::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">IIS Smooth Streaming Player <br />
                 Development kit</a></div>
               </div>
             </div>
             <div class="community">
-              <div class="communitytitle"><img src="images/community_title1.png" width="132" height="22" /></div>
+              <div class="communitytitle"><img src="images/community_title1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/community_title1.png" width="132" height="22" /></div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://www.silverlight.net/showcase/" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Silverlight_Showcase::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Silverlight Showcase</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://www.silverlight.net/showcase/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Silverlight_Showcase::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Silverlight Showcase</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://www.iis.net/" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Official_Microsoft_IIS_Site::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Official Microsoft IIS Site</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://www.iis.net/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Official_Microsoft_IIS_Site::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Official Microsoft IIS Site</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://visitmix.com/ " target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Visitmix::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Visitmix.com</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://visitmix.com/"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','Visitmix::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Visitmix.com</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://msdn.microsoft.com/zh-tw/default.aspx" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','MS_Developer_Network::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Microsoft Developer Network</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://msdn.microsoft.com/zh-tw/default.aspx"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','MS_Developer_Network::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Microsoft Developer Network</a></div>
               </div>
               <div class="linktab">
-                <div class="icon"><img src="images/icon_arrow.png" width="32" height="33" /></div>
-                <div class="link CommunityStyle"><a href="http://www.microsoft.com/taiwan/websiteSpark/default.htm" target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','MS_WebSiteSpark::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Microsoft WebSiteSpark</a></div>
+                <div class="icon"><img src="images/icon_arrow.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png" width="32" height="33" /></div>
+                <div class="link CommunityStyle"><a href="http://www.microsoft.com/taiwan/websiteSpark/default.htm"  target="_blank" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','MS_WebSiteSpark::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');">Microsoft WebSiteSpark</a></div>
               </div>
             </div>
         </div>
     </div>
   </div>
   <div class="InSidePageFooter">
-    <div class="Social"><a href="javascript:fbs_click();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','images/fb_icon_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','sharing_Facebook::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/fb_icon_1.png" name="Image18" width="32" height="35" border="0" id="Image18" /></a><a href="javascript:fbs_Twitter();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','images/tw_icon_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','sharing_Twitter::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/tw_icon_1.png" name="Image19" width="32" height="35" border="0" id="Image19" /></a><a href="javascript:fbs_Plurk();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image20','','images/pl_icon_2.png',1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','sharing_Plurk::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/pl_icon_1.png" name="Image20" width="32" height="35" border="0" id="Image20" /></a>
+    <div class="Social"><a href="javascript:fbs_click();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','images/fb_icon_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/fb_icon_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','sharing_Facebook::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/fb_icon_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/fb_icon_1.png" name="Image18" width="32" height="35" border="0" id="Image18" /></a><a href="javascript:fbs_Twitter();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','images/tw_icon_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/tw_icon_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','sharing_Twitter::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/tw_icon_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/tw_icon_1.png" name="Image19" width="32" height="35" border="0" id="Image19" /></a><a href="javascript:fbs_Plurk();" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image20','','images/pl_icon_2.png'/*tpa=http://www.microsoft.com/taiwan/silverlight/images/pl_icon_2.png*/,1)" onclick="_tag.dcsMSSetVar('WT.z_locale','zh-tw','WT.z_ea_name','sharing_Plurk::Aud:Consumer::CLK(EA)','WT.z_ea_actionoffer','Ent-sit','WT.z_ea_targetcampaign','000XXX00000');"><img src="images/pl_icon_1.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/pl_icon_1.png" name="Image20" width="32" height="35" border="0" id="Image20" /></a>
     </div>
-    <div class="Copyright FooterStyle"><a href="http://www.microsoft.com/taiwan/misc/cpyright.htm" target="_blank">使用規定</a> | <a href="http://support.microsoft.com/contactus/?ws=support" target="_blank">與我們聯絡</a> | <a href="http://www.microsoft.com/taiwan/legal/" target="_blank">法律相關訊息</a> | <a href="http://www.microsoft.com/library/toolbar/3.0/trademarks/zh-tw.mspx" target="_blank">商標</a> | <a href="http://www.microsoft.com/privacystatement/zh-tw/core/default.aspx" target="_blank">隱私權聲明</a><br />
+    <div class="Copyright FooterStyle"><a href="../misc/cpyright.htm" tppabs="http://www.microsoft.com/taiwan/misc/cpyright.htm" target="_blank">使用規定</a> | <a href="../../../support.microsoft.com/contactus/-ws=support" tppabs="http://support.microsoft.com/contactus/?ws=support" target="_blank">與我們聯絡</a> | <a href="../legal/index.htm" tppabs="http://www.microsoft.com/taiwan/legal/" target="_blank">法律相關訊息</a> | <a href="../../library/toolbar/3.0/trademarks/zh-tw.mspx" tppabs="http://www.microsoft.com/library/toolbar/3.0/trademarks/zh-tw.mspx" target="_blank">商標</a> | <a href="../../privacystatement/zh-tw/core/default.aspx" tppabs="http://www.microsoft.com/privacystatement/zh-tw/core/default.aspx" target="_blank">隱私權聲明</a><br />
         Copyright © 2012 Microsoft Corporation.<br />
     </div>
-    <div class="MicrosoftLogo"><img src="images/microsoft_logo.png" /></div>
+    <div class="MicrosoftLogo"><img src="images/microsoft_logo.png" tppabs="http://www.microsoft.com/taiwan/silverlight/images/microsoft_logo.png" /></div>
   </div>
 </div>
 <script type="text/javascript">

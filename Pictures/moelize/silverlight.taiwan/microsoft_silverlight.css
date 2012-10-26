@@ -52,7 +52,7 @@
 	padding-right: 10px;
 }
 .InSidePageBackground {
-	background-image: url(images/insidepage_bg.jpg);
+	background-image: url("images/insidepage_bg.jpg")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/insidepage_bg.jpg*/;
 	background-repeat: no-repeat;
 	background-position: center top;
 	height: auto;
@@ -81,7 +81,7 @@
 }
 
 .InSidePageBackground .InSidePageFooter {
-	background-image: url(images/footer_bg.png);
+	background-image: url("images/footer_bg.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/footer_bg.png*/;
 	background-repeat: no-repeat;
 	width: 940px;
 	margin-right: auto;
@@ -99,7 +99,7 @@
 	width: 960px;
 	margin-right: auto;
 	margin-left: auto;
-	background-image: url(images/white_bg.png);
+	background-image: url("images/white_bg.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/white_bg.png*/;
 	background-position: center 70px;
 	background-repeat: no-repeat;
 }
@@ -159,7 +159,7 @@
 	width: 90px;
 	float: left;
 	padding-left: 40px;
-	background-image: url(images/icon_arrow.png);
+	background-image: url("images/icon_arrow.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png*/;
 	background-repeat: no-repeat;
 	height: 24px;
 	background-position: 12px -1px;
@@ -175,7 +175,7 @@
 	width: 90px;
 	float: left;
 	padding-left: 40px;
-	background-image: url(images/icon_arrow.png);
+	background-image: url("images/icon_arrow.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png*/;
 	background-repeat: no-repeat;
 	height: 24px;
 	background-position: 12px -1px;
@@ -200,7 +200,7 @@
 	width: 90px;
 	float: left;
 	padding-left: 30px;
-	background-image: url(images/icon_arrow.png);
+	background-image: url("images/icon_arrow.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png*/;
 	background-repeat: no-repeat;
 	height: 24px;
 	background-position: 2px 3px;
@@ -220,7 +220,7 @@
 	padding-bottom: 5px;
 }
 .InSidePageBackground .CollectionDesktop .DesktopFrom3 .SizeBtnWP {
-	background-image: url(images/icon_arrow.png);
+	background-image: url("images/icon_arrow.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png*/;
 	background-repeat: no-repeat;
 	height: 24px;
 	background-position: 3px 3px;
@@ -252,7 +252,7 @@
 .InSidePageBackground .CollectionDesktop .DesktopFrom4 .SizeBtn {
 	width: 90px;
 	padding-left: 40px;
-	background-image: url(images/icon_arrow.png);
+	background-image: url("images/icon_arrow.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png*/;
 	background-repeat: no-repeat;
 	height: 24px;
 	background-position: 12px -1px;
@@ -279,7 +279,7 @@
 .InSidePageBackground .CollectionDesktop .DesktopFrom5 .SizeBtn {
 	width: 180px;
 	padding-left: 40px;
-	background-image: url(images/icon_arrow.png);
+	background-image: url("images/icon_arrow.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png*/;
 	background-repeat: no-repeat;
 	height: 24px;
 	background-position: 12px -1px;
@@ -308,7 +308,7 @@
 .InSidePageBackground .CollectionDesktop .DesktopFrom6 .SizeBtn {
 	width: 180px;
 	padding-left: 40px;
-	background-image: url(images/icon_arrow.png);
+	background-image: url("images/icon_arrow.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/icon_arrow.png*/;
 	background-repeat: no-repeat;
 	height: 24px;
 	background-position: 12px -1px;
@@ -359,7 +359,7 @@
 	margin-left: auto;
 }
 .InSidePageBackground  .AppliContent .AppliIntro {
-	background-image: url(images/application_intro.png);
+	background-image: url("images/application_intro.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/application_intro.png*/;
 	background-repeat: no-repeat;
 	height: 450px;
 	width: 960px;
@@ -422,7 +422,7 @@
 	float: left;
 	height: 84px;
 	width: 280px;
-	background-image: url(images/blog_stick_event.png);
+	background-image: url("images/blog_stick_event.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/blog_stick_event.png*/;
 	background-position: center center;
 	background-repeat: no-repeat;
 	padding-top: 266px;
@@ -441,7 +441,7 @@
 	width: 410px;
 	padding-top: 20px;
 	float: left;
-	background-image: url(images/blog_stick_code_clock.png);
+	background-image: url("images/blog_stick_code_clock.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/blog_stick_code_clock.png*/;
 	background-repeat: no-repeat;
 	padding-right: 20px;
 	background-position: 180px 48px;
@@ -450,7 +450,7 @@
 	width: 410px;
 	padding-top: 20px;
 	float: left;
-	background-image: url(images/blog_stick_code_text.png);
+	background-image: url("images/blog_stick_code_text.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/blog_stick_code_text.png*/;
 	background-repeat: no-repeat;
 	background-position: 180px 48px;
 }
@@ -479,7 +479,7 @@
 
 
 .Sepline   {
-	background-image: url(images/sepline.png);
+	background-image: url("images/sepline.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/sepline.png*/;
 	background-repeat: no-repeat;
 	height: 10px;
 	width: 900px;
@@ -538,7 +538,7 @@
 .InSidePageBackground  .Resources  .Intro {
 	height: 270px;
 	width: 850px;
-	background-image: url(images/resource_intro.png);
+	background-image: url("images/resource_intro.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resource_intro.png*/;
 	background-repeat: no-repeat;
 	margin-right: auto;
 	margin-left: auto;
@@ -568,7 +568,7 @@
 	width: 840px;
 	margin-right: auto;
 	margin-left: auto;
-	background-image: url(images/resources_hikitv_bg.png);
+	background-image: url("images/resources_hikitv_bg.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resources_hikitv_bg.png*/;
 	background-repeat: no-repeat;
 }
 .InSidePageBackground .Resources .HikiTV .Btn {
@@ -601,12 +601,12 @@
 	margin-right: auto;
 	margin-left: auto;
 	padding-top: 20px;
-	background-image: url(images/resource_content_bg.png);
+	background-image: url("images/resource_content_bg.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resource_content_bg.png*/;
 	background-repeat: no-repeat;
 	background-position: center 165px;
 }
 .InSidePageBackground    .Resources    .content    .resourcetitle  {
-	background-image: url(images/resource_title.png);
+	background-image: url("images/resource_title.png")/*tpa=http://www.microsoft.com/taiwan/silverlight/images/resource_title.png*/;
 	background-repeat: no-repeat;
 	height: 50px;
 	width: 850px;
