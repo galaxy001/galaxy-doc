@@ -1,0 +1,76 @@
+<!--TOOLBAR_EXEMPT-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" >
+<html>
+	<head>
+		<meta http-equiv="Content-Language" content="zh-tw">
+		<meta name="ms.locale" content="zh-tw">
+		<meta http-equiv="Content-Type" content="text/html; charset=big5">
+		<link href="/library/toolbar/3.0/css.aspx?c=/taiwan/homepage/shell.config" rel="stylesheet" type="text/css" />
+		<link REL="stylesheet" HREF="/taiwan/microsofthp9.css" TYPE="text/css">
+		<link rel="stylesheet" href="/taiwan/flyoutmenu/default.css" type="text/css">
+<TITLE>Sorry, there is no microsoft.com Web page matching your request.</TITLE>
+	</head>
+	<body>
+		<!-- start of masthead code -->
+		<script language="JavaScript" src="/library/toolbar/3.0/?c=/taiwan/homepage/shell.config"></script>
+		<noscript>
+			<a href="http://www.microsoft.com/taiwan/">
+				<img src="/library/toolbar/3.0/noscript.aspx?type=banner&amp;brand=Microsoft&amp;dir=ltr" border="0" alt="Microsoft" title="" align="absmiddle" />
+			</a>
+			<a href="http://www.microsoft.com/taiwan">台灣微軟網站</a> |
+			<a href="/library/toolbar/3.0/sitemap.aspx?locale=zh-tw">網站導覽</a> |
+			<a href="http://search.microsoft.com/search/search.aspx?View=zh-tw">搜尋</a>
+		</noscript>
+		<!-- end of masthead code -->
+
+<TABLE CELLPADDING=0 CELLSPACING=0 WIDTH=618 BORDER=0 class="font3" style="font-family: Verdana; font-size: 9pt; line-height: 12pt">         
+         
+<TR><!-- spacer row - specify all others with colspan or rowspan-->         
+<!--1--><!--2--><TD WIDTH=150></TD>         
+<!--3--><TD WIDTH=1></TD>         
+<!--4--><TD WIDTH=9></TD>         
+<!--5--><TD WIDTH=208></TD>         
+<!--6--><!--7--><!--8--><!--9--><!--10--><TD WIDTH=15></TD>         
+</TR>         
+         
+<TR>         
+<!-- spacer column -->         
+         
+<TD ROWSPAN=2>         
+</TD>         
+         
+<!-- spacer column -->         
+<TD ROWSPAN=2 BGCOLOR="#006666">　</TD>     
+     
+     
+<!-- spacer column -->     
+<TD ROWSPAN=2></TD>     
+     
+<!--main content cell-->     
+<TD>     
+<br>     
+很抱歉，microsoft.com 並沒有合乎您所要求的網頁。<p>這可能是您鍵入錯誤的網址，或該網頁已不存在。<p>你可以參考下列網頁來取得微軟服務與產品資訊。<p><a href="/taiwan/"><font color="#0066FF">台灣微軟首頁</font></a><BR>      
+獲得台灣微軟最新的資訊。<p><a href="http://search.microsoft.com/taiwan/"><font color="#0066FF">台灣微軟搜尋網頁</font></a><BR>      
+以關鍵字或類別方式搜尋台灣微軟網站。<p><a href="/taiwan/products/"><font color="#0066FF">台灣微軟產品網頁</font></a><BR>      
+查看台灣微軟系列產品。<p><a href="/taiwan/support/"><font color="#0066FF">台灣微軟技術支援服務</font></a><BR>      
+獲得技術支援及常見問題的解答。<p><a href="/worldwide/"><font color="#0066FF">全球微軟網站</font></a><BR>      
+尋找全球各地的微軟網站。</TD>      
+      
+<!-- far-right spacer column -->      
+<TD ROWSPAN=2></TD>      
+</TR>      
+      
+<TR>      
+<!--copyright cell-->      
+<TD>      
+<HR WIDTH="100%" SIZE=1 NOSHADE>      
+</TD>        
+        
+</TR>        
+</TABLE> 
+		
+		
+		<script language="javascript">renderFooter();</script>
+
+</body>
+</html>
