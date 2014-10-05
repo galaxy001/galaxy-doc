@@ -1,0 +1,67 @@
+a{
+	color:#0099ff;
+}
+.download_wrap{
+	width:1122px;
+	margin:0 auto;
+	padding-bottom:20px;
+	position:relative;
+}
+.download_img{
+	position:absolute;
+	left:454px;
+	top:125px;
+}
+.download_box1{
+	width: 770px;
+	margin: 15px 0 0 40px;
+	background: #fff;
+	position: relative;
+	padding: 15px 0 0 30px;
+}
+.download_ttl1{
+	margin:0 0 15px 0;
+}
+.download_ttl3{
+	margin:0 0 5px 0;
+}
+.download_item1{
+	float:left;
+	margin-right:12px;
+	padding-bottom:18px;
+	display:inline;
+	text-align:center;
+}
+.download_size li{
+	text-align:center;
+	margin-top:8px;
+	font-size:12px;
+}
+.download_box2{
+	width:770px;
+	margin:50px 0 0 40px;
+	background:#fff;
+	position:relative;
+	padding: 15px 0 0 30px;
+}
+.download_item2{
+	float:left;
+	margin-right:25px;
+	padding-bottom:18px;
+	display:inline;
+	text-align:center;
+}
+.download_sukima1{
+	padding-top:15px;
+}
+.download_txt1{
+	color:#e62e8b;
+	height:15px;
+	font-size:10px;
+	text-align:center;
+	line-height:1.5;
+}
+.download_txt2 {
+	color:#e62e8b;
+	margin-top: 3px;
+}

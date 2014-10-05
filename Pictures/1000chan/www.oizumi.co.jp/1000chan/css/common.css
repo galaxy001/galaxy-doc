@@ -1,0 +1,81 @@
+html{
+	height:100%;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size:12px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	background:#0099ff;
+	height:100%;
+}
+h1,h2,h3,h4,p,ul,ol,li,dl,dt,dd,section,nav,header,footer,hr,button{
+	padding: 0;
+	margin:0;
+	font-weight:normal;
+	line-height:1;
+}
+li{
+	list-style:none;
+}
+img{
+	border:none;
+	vertical-align:top;
+}
+.clearfix {
+	zoom:1;
+}
+.clearfix:after {
+  content: ""; 
+  display: block; 
+  clear: both;
+}
+.bg_wrap{
+	background:url(../images/common/bg.png) top center;
+}
+.header{
+	padding:10px 15px;
+}
+.logo{
+	width:274px;
+	margin:0 6px 0 0;
+	float:left;
+	display:inline;
+}
+.nav{
+	margin:33px 0 0 0;
+	width:800px;
+	position:relative;
+	float:left;
+}
+.nav li{
+	float:left;
+	padding:0 9px 9px 0;
+}
+.nav li.nav_twitter_btn{
+	float:none;
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+.bnr_warp {
+	margin: 0px auto;
+	width: 1122px;
+	padding-top:4px;
+}
+.bnr_list{
+	width:1128px;
+	margin-right:-6px;
+}
+.bnr_list li{
+	float:left;
+	margin-right:6px;
+	margin-bottom:4px;
+}
+.copyright{
+	color:#fff;
+	line-height:1;
+}
+.copyright span{
+	font-family:'Times New Roman', 'Times';
+}

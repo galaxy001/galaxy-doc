@@ -1,0 +1,36 @@
+.modal_btn{
+	cursor:pointer;
+}
+#modal_cover{
+	position:absolute;
+	top:0;
+	left:0;
+	background:#000;
+	filter: alpha(opacity=60);
+ 	-moz-opacity:0.6;
+  	opacity:0.6;
+	display:none;
+}
+#modal_box{
+	background:#fff;
+	width:853px;
+	height:480px;
+	padding:15px;
+	border-radius:10px;
+	position:fixed;
+	top:50%;
+	left:50%;
+	margin-top:-240px;
+	margin-left:-426px;
+	display:none;
+}
+#modal_close{
+	background:url(../images/modal/close.png) no-repeat 0 0;
+	width:46px;
+	height:46px;
+	position:absolute;
+	top:-25px;
+	right:-25px;
+	cursor:pointer;
+}
+

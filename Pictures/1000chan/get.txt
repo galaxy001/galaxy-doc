@@ -1,0 +1,2 @@
+wget -mkEpnp http://www.oizumi.co.jp/1000chan/download.html
+

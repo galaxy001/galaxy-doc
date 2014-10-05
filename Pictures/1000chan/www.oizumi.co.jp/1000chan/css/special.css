@@ -1,0 +1,115 @@
+.sp_wrap{
+	background:url(../images/kikaku/kikaku_bg.png) center top;
+	width:1122px;
+	margin:0 auto;
+	padding-bottom:40px;
+	position:relative;
+}
+
+.sp_pv_img{
+	position:absolute;
+	left:241px;
+	top:200px;
+	cursor:pointer;
+}
+
+.sp_pv{
+	position:absolute;
+	left:241px;
+	top:200px;
+}
+.sp_pv2{
+	position:absolute;
+	left:241px;
+	top:580px;
+}
+.seni{
+	position:absolute;
+	left:241px;
+	top:200px;
+	width:640px;
+	height:360px;
+	background:url(../images/special/bg1.jpg) no-repeat 0 0;
+
+}
+.seni_btn{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-30px;
+	margin-left:-190px;
+}
+.sp_chara{
+	margin-top:800px;
+	text-align:center;
+}
+.sp_bnr{
+	margin-top:-75px;
+	margin-left:350px;
+}
+.sp_bnr2{
+	margin-top:-115px;
+	margin-left:350px;
+}
+.sp_bnr3{
+	margin-top:-90px;
+	margin-left:295px;
+}
+
+/*ダウンロード*/
+.sp_download{
+	background:#fff;
+	width:980px;
+	padding:15px 30px;
+	margin:25px auto 0 auto;
+	position:relative;
+	z-index:5;
+}
+.sp_dl_ttl{
+	margin-bottom:15px;s
+}
+.sp_dl_txt{
+	text-align:center;
+	margin:20px 0;
+}
+.sp_dl_btns li{
+	float:left;
+	margin-right:34px;
+}
+.sp_dl_btns li.last{
+	margin-right:0;
+}
+.sp_dl_box1{
+	position:relative;
+	margin:20px auto 0 auto;
+	width:1040px;
+	height:350px;
+}
+.sp_dl_chara{
+	position:absolute;
+	top:-40px;
+	left:0px;
+}
+.sp_dl_mini1000{
+	position:absolute;
+	right:0px;
+	top:0px;
+}
+.sp_dl_twitter{
+	position: absolute;
+	right: 130px;
+	top: 20px;
+	width: 275px;
+	height: 294px;
+	background: url(../images/special/twitter_bg.png) no-repeat 0 0;
+}
+.sp_dl_twitter_btn{
+	position:absolute;
+	right:2px;
+	bottom:0;
+	width:50px;
+	height:50px;
+}
+.sp_dl_twitter_timeline{
+	margin: 73px 0 0 25px;
+}

@@ -1,0 +1,14 @@
+.character_wrap{
+	width:1122px;
+	margin:0 auto;
+	position:relative;
+}
+.character_section{
+	margin-left: 207px;
+	padding-bottom: 75px;
+}
+#character_mirio{
+	position: absolute;
+	left:14px;
+	top:213px;
+}

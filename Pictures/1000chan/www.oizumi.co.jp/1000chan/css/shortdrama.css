@@ -1,0 +1,101 @@
+.drama_wrap{
+	width:1122px;
+	margin: auto;
+}
+.drama_contents_wrap{
+	width: 1008px;
+	margin: auto;
+	padding-bottom:145px;
+}
+.drama_ttl{
+	margin-bottom: 20px;
+}
+.drama_contents{
+	background:url(../images/common/bg2.png);
+	padding: 30px 0;
+}
+.drama_header{
+	width:928px;
+	margin:0 auto 20px auto;
+}
+.drama_left{
+	float: left;
+	margin-right: 45px;
+}
+.drama_center{
+	float: left;
+	margin-right: 37px;	
+}
+.drama_subsubttl{
+	color: #0396fd;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.drama_right{
+	float: left;
+	width:211px;
+	position:relative;
+}
+.drama_txt{
+	font-size: 14px;
+	line-height: 1.2;
+	margin-top:30px;
+}
+.drama_next{
+	position: absolute;
+	top: 247px;
+	right: 0px;
+	text-align:center;
+	width: 207px;
+	border: 2px solid #0396fd;
+	padding: 10px 0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+
+}
+.drama_myrio_bnr{
+	text-align:center;
+	margin-top: 10px;
+}
+.drama_backnumbers{
+	width:928px;
+	margin:0 auto;
+	border-top:2px solid #0396fd;
+}
+.drama_backnumbers_list{
+	position: relative;
+	margin-top:-20px;
+	width:968px;
+	margin-right:-40px;
+}
+.drama_backnumbers_list:before{
+	content:'';
+	display:block;
+	width:928px;
+	height:0;
+	border-bottom:2px solid #0396fd;
+	position:absolute;
+	bottom: 20px;
+}
+.drama_backnumbers_list li{
+	float:left;
+	width:200px;
+	height:280px;
+	padding:40px 20px 40px 0;
+	border-right: 2px solid #0396fd;
+	margin-right:20px;
+}
+.drama_backnumbers_list li.last{
+	float:left;
+	width:200px;
+	height:280px;
+	padding:40px 0 40px 0;
+	margin-right: 0;
+	border-right: none;
+}
+.drama_backnumber_txt{
+	font-size: 14px;
+	line-height: 1.2;
+	margin-top:3px;
+}
