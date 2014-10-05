@@ -1,2 +1,3 @@
 proxychains -q wget -mkEpnp http://www.microsoft.com/taiwan/silverlight/collection.htm
-
+proxychains -q wget -mkEpnp http://www.microsoft.com/taiwan/silverlight/mission_vd.htm
+proxychains -q wget -mkEpnp http://www.microsoft.com/taiwan/silverlight/mission_cosplay2.htm
