@@ -1,3 +1,7 @@
+wget -mkEpnp http://suishoshizuku.com
+
+
+
 http://crystalmark.info/Shizuku/index-en.html
 
 New Generation Disk Information Tool : CrystalDiskInfo 5 Shizuku Edition
