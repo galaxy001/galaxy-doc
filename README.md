@@ -3,4 +3,8 @@ galaxy-doc
 
 Galaxy's Doc
 
+http://stackoverflow.com/questions/5807459/github-mirroring-gh-pages-to-master
+
+git checkout gh-pages
+git merge master
 git push origin gh-pages
