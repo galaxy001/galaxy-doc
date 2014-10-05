@@ -1,0 +1,67 @@
+@charset "big5";
+/* CSS Document */
+
+html,body{margin:0; padding:0; background:#fff;}
+/*body{background:url(images/layout.jpg) no-repeat top center; height:1643px;}*/
+img{border:none;}
+
+#titleBg, #content, div.footerBg,#menu{width:980px; margin:0 auto; color:#454545; font-family:"微軟正黑體"; font-size:16px; line-height:28px;}
+div.footerBg{background:#eee; width:100%; padding:0 0 25px 0; }
+
+dl#header{overflow:auto; margin:20px 0px 15px 0px;width:980px}
+dl#header > dd, dl#header > dt{margin:0; padding:0;}
+dl#header > dd{float:left; width:550px; margin:0; padding:0;}
+dl#header > dd.search{width:350px;border:1px solid #ccc;margin-top:26px;}
+dl#header > dd > img{margin-top:20px;}
+dl#header > dd > h1{color:#000; font-family:"微軟正黑體"; font-size:26px; margin:20px 0 0 0; padding:0;}
+dl#header > dd > form{margin:0; padding:0;}
+dl#header > dd > form > input{margin-top:5px; padding:5px 5px; border:0px; width:310px; font-family:"微軟正黑體"; font-size:12px;}
+.menuzone{border-bottom:#eee 5px solid;}
+ul#menu{margin:0 auto;width:980px; padding:0; list-style:none;  overflow:auto;}
+ul#menu > li{margin:0; padding:0; list-style:none; float:left;}
+ul#menu > li > a{display:block; margin:0 12px; padding:5px 7px; text-decoration:none; color:#000;cursor:pointer}
+ul#menu > li > a.focus,ul#menu > li:hover > a{background:#eee; color:#1872b0;}
+ul#menu > li > .sub_menu_bg{background:#eee;display:none;position:absolute;width:100%;left:0;padding-top:20px;padding-bottom:20px;}
+ul#menu .sub_menu_box{width:980px;margin:0 auto;display:table}
+ul#menu > li > div > div > ul{ margin:0; padding:15px 25px; list-style:none; background:#eee;display:table-cell;width:25%;}
+.right_border{
+	border-right:1px white solid;
+}
+ul#menu > li > div > div > ul > li{padding:8px 0; color:#1872b0;}
+ul#menu > li > div > div > ul > li > a{color:#1872b0; text-decoration:none;}
+ul#menu > li > div > div > ul > li > a.focus{color:#000;}
+
+dl#footer{overflow:auto; width:980px; margin:0 auto; padding:0;}
+dl#footer > dd, dl#footer > dd > ul, dl#footer > dd > ul > li{list-style:none; margin:0; padding:0;}
+dl#footer > dd{float:left; width:245px;}
+dl#footer > dd.tw{width:852px; padding-left:45px; line-height:36px; background:url(images/world.gif) no-repeat 10px 4px; font-size:12px;}
+dl#footer > dd.logo{width:83px;}
+dl#footer > dd.links{width:100%;}
+dl#footer > dd.links > ul{margin:0; padding:0; overflow:auto;}
+dl#footer > dd.links > ul > li{padding-left:20px; float:right; font-size:12px; color:#454545;}
+dl#footer > dd.links > ul > li > a{color:#1872b0; text-decoration:none;}
+dl#footer > dd.links > ul > li > a:hover{color:#083047; text-decoration:underline;}
+
+dl#footer > dd > ul > li{line-height:24px; font-size:14px; color:#1872b0;}
+dl#footer > dd > a, dl#footer > dd > ul > li > a{color:#1872b0; text-decoration:none;}
+dl#footer > dd > a:hover, dl#footer > dd > ul > li > a:hover{color:#083047; text-decoration:underline;}
+dl#footer > dd > ul > li.win, dl#footer > dd > ul > li.office, dl#footer > dd > ul > li.wp, dl#footer > dd > ul > li.xbox, dl#footer > dd > ul > li.skype, dl#footer > dd > ul > li.bing, dl#footer > dd > ul > li.msStore{padding-left:45px; line-height:36px; color:#454545;}
+dl#footer > dd.other > ul > li > a{color:#454545;}
+dl#footer > dd > ul > li.win{background:url(images/win.gif) no-repeat 10px 4px;}
+dl#footer > dd > ul > li.office{background:url(images/office.gif) no-repeat 10px 4px;}
+dl#footer > dd > ul > li.wp{background:url(images/wp.gif) no-repeat 10px 4px;}
+dl#footer > dd > ul > li.xbox{background:url(images/xbox.gif) no-repeat 10px 4px;}
+dl#footer > dd > ul > li.skype{background:url(images/skype.gif) no-repeat 10px 4px;}
+dl#footer > dd > ul > li.bing{background:url(images/bing.gif) no-repeat 10px 4px;}
+dl#footer > dd > ul > li.msStore{background:url(images/msStore.gif) no-repeat 10px 4px;}
+
+a {color: #00629d;text-decoration: none}
+
+.a_line{text-decoration:none;text-transform:none;color:#00629d;font-family:微軟正黑體;font-weight:600;/}
+.products_tb{width:225px;height:28px;padding-left:26px;padding-bottom:3px;/}
+.table_style1{width:250px;height:28px;}
+.table_style2{width:250px;height:28px;font-size:14px;text-transform:none;/}
+.title01{font-weight:600;font-size:24px;font-family:微軟正黑體;height:40px;/}
+.title01_line{color:#454545;text-transform:none;text-decoration:none;/}
+.back{background: url(images/products/back.png.html);background-repeat:no-repeat;background-position:right;text-align:right;padding-right:25px;color:#00629d;font-size:14px;float:right;}
+.line{width:750px;margin-top:15px;margin-bottom:50px;/}
