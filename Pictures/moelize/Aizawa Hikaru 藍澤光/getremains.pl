@@ -29,7 +29,7 @@ for my $size (@sizes) {
 		$t = "proxychains -q wget -mkEpnp ${prefix}_${in}_${size}_2$suffix";
 	}
 	print "$t\n";
-	system "$t";
+	#system "$t";
 }
 
 __END__
