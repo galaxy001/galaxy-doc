@@ -1,0 +1,1080 @@
+@charset "utf-8";
+body {
+	background-image: url(images/full_background.jpg);
+	background-repeat: repeat-x;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #FFFFFF;
+}
+
+.DefaultBackground {
+	background-image: url(images/default_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 900px;
+	width: 100%;
+}
+.DefaultBackground .DefaultMainframe {
+	height: 900px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.DefaultBackground  .DefaultMainframe  .DefaultMissionmenu {
+	float: left;
+	clear: both;
+	width: 910px;
+	height: 605px;
+}
+.DefaultBackground .DefaultMainframe .DefaultMainmenu {
+	float: left;
+	clear: left;
+	padding-left: 50px;
+	width: 360px;
+	height: 135px;
+}
+.DefaultBackground .DefaultMainframe .DefaultMainmenuPlusSocialBtn {
+	clear: both;
+	height: 100px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.DefaultBackground .DefaultMainframe .DefaultSocialBtn {
+	float: right;
+	padding-right: 10px;
+	padding-top: 65px;
+	height: 160px;
+}
+.DefaultBackground .DefaultMainframe .DefaultFooter {
+	float: left;
+	width: 940px;
+	clear: left;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+.DefaultBackgroundV2 {
+	background-image: url(images/default_v2_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 900px;
+	width: 100%;
+}
+.DefaultBackgroundV2 .DefaultMainframe {
+	height: 900px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.DefaultBackgroundV2  .DefaultMainframe  .DefaultMissionmenu {
+	float: left;
+	clear: both;
+	width: 910px;
+	height: 310px;
+}
+.DefaultBackgroundV2 .DefaultMainframe .DefaultMainmenu {
+	float: left;
+	clear: left;
+	padding-left: 5px;
+	width: 360px;
+	height: 320px;
+}
+.DefaultMainmenu2   {
+	float: left;
+	clear: left;
+	padding-left: 10px;
+	width: 360px;
+	height: 100px;
+	padding-top: 20px;
+}
+.DefaultMainmenu2  .SL   {
+	height: 44px;
+	clear: both;
+}
+.DefaultMainmenu2  .Caution   {
+	clear: both;
+}
+
+
+.DefaultBackgroundV2 .DefaultMainframe .DefaultMainmenuPlusSocialBtn {
+	clear: both;
+	height: 100px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.DefaultBackgroundV2 .DefaultMainframe .DefaultSocialBtn {
+	float: right;
+	padding-right: 10px;
+	padding-top: 65px;
+	height: 160px;
+}
+.DefaultBackgroundV2 .DefaultMainframe .DefaultFooter {
+	float: left;
+	width: 940px;
+	clear: left;
+	padding-top: 3px;
+	padding-left: 10px;
+}
+.DefaultHalloweenBackground {
+	background-image: url(images/default_halloween_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 900px;
+	width: 100%;
+	background-color: #000000;
+}
+.DefaultHalloweenBackground .DefaultMainframe {
+	height: 900px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.DefaultHalloweenBackground  .DefaultMainframe  .DefaultMissionmenu {
+	float: left;
+	clear: both;
+	width: 910px;
+	height: 553px;
+}
+.DefaultHalloweenBackground .DefaultMainframe .DefaultMainmenu {
+	float: left;
+	clear: left;
+	padding-left: 44px;
+	width: 400px;
+	height: 189px;
+}
+.DefaultHalloweenBackground .DefaultMainframe .DefaultMainmenuPlusSocialBtn {
+	clear: both;
+	height: 100px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.DefaultHalloweenBackground .DefaultMainframe .DefaultSocialBtn {
+	float: right;
+	padding-right: 10px;
+	padding-top: 65px;
+	height: 160px;
+}
+.DefaultHalloweenBackground .DefaultMainframe .DefaultFooter {
+	float: left;
+	width: 940px;
+	clear: left;
+	padding-top: 20px;
+	padding-left: 10px;
+}
+.DefaultXmasBackground {
+	background-image: url(images/default_xmas_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 900px;
+	width: 100%;
+	background-color: #FFFFFF;
+}
+.DefaultXmasBackground .DefaultMainframe {
+	height: 900px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.DefaultXmasBackground  .DefaultMainframe  .DefaultMissionmenu {
+	float: left;
+	clear: both;
+	width: 400px;
+	height: 217px;
+	padding-top: 337px;
+	padding-left: 20px;
+}
+.DefaultXmasBackground .DefaultMainframe .DefaultMainmenu {
+	float: left;
+	clear: left;
+	padding-left: 10px;
+	width: 400px;
+	height: 120px;
+}
+.DefaultXmasBackground .DefaultMainframe .DefaultMainmenuPlusSocialBtn {
+	clear: both;
+	height: 100px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.DefaultXmasBackground .DefaultMainframe .DefaultSocialBtn {
+	float: right;
+	padding-right: 10px;
+	padding-top: 65px;
+	height: 160px;
+}
+.DefaultXmasBackground .DefaultMainframe .DefaultFooter {
+	float: left;
+	width: 940px;
+	clear: left;
+	padding-top: 30px;
+	padding-left: 10px;
+}
+.InSidePageBackground {
+	background-image: url(images/insidepage_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: auto;
+	width: 100%;
+}
+.InSidePageBackground .InSidePageMainmenu {
+	height: 65px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground .InSidePageMainmenu .InSideMainmenu {
+	float: right;
+	width: 750px;
+	padding-top: 15px;
+}
+.InSidePageBackground .InSidePageMainmenu .InSideMainmenu .BtnTab {
+	float: right;
+	height: auto;
+	width: auto;
+	padding-left: 15px;
+	padding-top: 17px;
+}
+
+.InSidePageBackground .InSidePageFooter {
+	background-image: url(images/footer_bg.png);
+	background-repeat: no-repeat;
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 52px;
+	padding-left: 10px;
+	padding-top: 7px;
+	padding-right: 10px;
+	padding-bottom: 25px;
+}
+
+.InSidePageBackground .CollectionTitle {
+	height: 50px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+	padding-left: 60px;
+	clear: both;
+}
+.InSidePageBackground .CollectionDesktop {
+	height: 960px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	padding-left: 60px;
+	background-image: url(images/white_bg.png);
+	background-repeat: no-repeat;
+	background-position: center -10px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom {
+	float: left;
+	height: 183px;
+	width: 425px;
+	padding-right: 15px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .DesktopPic {
+	float: left;
+	height: auto;
+	width: auto;
+	border: 1px solid #FFFFFF;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .DesktopPicWP {
+	float: left;
+	height: auto;
+	width: auto;
+	padding-left: 15px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeTitle {
+	width: 120px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeBtn {
+	width: 90px;
+	float: left;
+	padding-left: 40px;
+	background-image: url(images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeTitleWP {
+	width: 250px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom .SizeBtnWP {
+	width: 90px;
+	float: left;
+	padding-left: 40px;
+	background-image: url(images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom2 {
+	float: left;
+	height: 183px;
+	width: 130px;
+	padding-right: 15px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom2 .SizeTitle {
+	width: 120px;
+	float: left;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom2 .SizeBtn {
+	width: 90px;
+	float: left;
+	padding-left: 40px;
+	background-image: url(images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 {
+	float: left;
+	height: 220px;
+	width: 425px;
+	padding-right: 15px;
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 .DesktopPic {
+	float: left;
+	height: auto;
+	width: 292px;
+	border: 1px solid #FFFFFF;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 .SizeTitle {
+	width: 120px;
+	float: right;
+	padding-left: 10px;
+	padding-top: 5px;
+	clear: right;
+}
+.InSidePageBackground .CollectionDesktop .DesktopFrom3 .SizeBtn {
+	width: 90px;
+	float: right;
+	padding-left: 40px;
+	background-image: url(images/icon_arrow.png);
+	background-repeat: no-repeat;
+	height: 24px;
+	background-position: 12px -1px;
+	padding-top: 5px;
+	clear: right;
+}
+.InSidePageBackground .MissionTitle {
+	height: 50px;
+	width: 880px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+	padding-left: 80px;
+}
+
+.InSidePageBackground .MissionPoster {
+	height: 1120px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.InSidePageBackground .MissionHugBG {
+	background-image: url(images/mission_hug_hikibg_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+.InSidePageBackground .MissionHugTitle {
+	width: 900px;
+	padding-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 60px;
+	padding-bottom: 10px;
+	clear: both;
+}
+.InSidePageBackground .MissionHugAwardContent {
+	height: 1020px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground .MissionHugContent {
+	height: 1800px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground .MissionHugContent .MainFrame {
+	background-image: url(images/mission_hug_letter.png);
+	background-repeat: no-repeat;
+	background-position: 0px 550px;
+	height: 1150px;
+	width: 960px;
+}
+.InSidePageBackground .MissionHugContent .MainFrame .Step1 {
+	width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+	height: 450px;
+}
+.InSidePageBackground .MissionHugContent .MainFrame .Step1 .Steps {
+	clear: left;
+	float: left;
+	height: 450px;
+	width: 240px;
+	background-image: url(images/mission_hug_step1_steps.png);
+	background-repeat: no-repeat;
+	background-position: 0px 30px;
+}
+
+.InSidePageBackground .MissionHugContent .MainFrame .Step1 .Test {
+	clear: right;
+	float: right;
+	height: auto;
+	width: 590px;
+}
+.InSidePageBackground .MissionHugContent .MainFrame .Step1 .Test .Info {
+	clear: both;
+	float: left;
+	width: 570px;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+}
+.InSidePageBackground .MissionHugContent .MainFrame .Step1 .Test .Result {
+	background-image: url(images/mission_hug_step1_bg.png);
+	background-repeat: no-repeat;
+	height: 220px;
+	width: 590px;
+	clear: both;
+	float: left;
+}
+.InSidePageBackground .MissionHugContent .MainFrame .Step1 .Test .Btn {
+	clear: both;
+	height: 55px;
+	width: 380px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+}
+.InSidePageBackground  .MissionHugContent  .HugResourceTitle {
+	height: 40px;
+	width: 860px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground  .MissionHugContent  .HugResource {
+	height: 600px;
+	width: 860px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 30px;
+}
+
+.InSidePageBackground .MissionOsuTitle {
+	width: 920px;
+	padding-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 60px;
+	padding-bottom: 10px;
+	clear: both;
+}
+.InSidePageBackground .MissionOsuBG {
+	background-image: url(images/mission_osu_hikibg_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+
+.InSidePageBackground .MissionOsuTitle2 {
+	width: 910px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 70px;
+	padding-bottom: 10px;
+	clear: both;
+	padding-top: 20px;
+}
+.InSidePageBackground .MissionOsuContent {
+	height: 750px;
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground .MissionOsuContent2 {
+	height: 750px;
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(images/mission_osu_hikibg2.png);
+	background-repeat: no-repeat;
+	background-position: center 0px;
+}
+.InSidePageBackground  .MissionXmasBG {
+	background-image: url(images/xmas_bg.jpg);
+	background-repeat: no-repeat;
+	background-position: center 0px;
+	height: auto;
+	width: 100%;
+}
+.InSidePageBackground .MissionXmasContent {
+	height: 950px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.InSidePageBackground  .MissionXmasContent  .Intro  {
+	height: 220px;
+	width: 960px;
+	padding-top: 60px;
+	padding-bottom: 20px;
+}
+.InSidePageBackground .MissionXmasContent .SL {
+	height: 540px;
+	width: 960px;
+}
+.InSidePageBackground .MissionXmasContent .NoSL {
+	height: 100px;
+	width: 670px;
+	background-image: url(images/xmas_nosl.jpg);
+	background-repeat: no-repeat;
+	padding-top: 440px;
+	padding-left: 290px;
+}
+.InSidePageBackground .MissionXmasBG .Publish {
+	background-image: url(images/xmas_publish_bg.png);
+	background-repeat: no-repeat;
+	height: 100px;
+	width: 960px;
+	background-position: left 20px;
+	padding-top: 26px;
+	padding-left: 260px;
+}
+
+
+
+.InSidePageBackground   .OsuSignupTitle   {
+	height: 60px;
+	width: 920px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 60px;
+	clear: both;
+	padding-top: 25px;
+}
+.InSidePageBackground   .OsuSignup   {
+	height: 320px;
+	width: 920px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 60px;
+	clear: both;
+	padding-top: 20px;
+}
+.InSidePageBackground  .OsuSignup  .Location  {
+	float: left;
+	height: 300px;
+	width: 380px;
+	padding-left: 8px;
+}
+.InSidePageBackground  .OsuSignup  .Test1  {
+	float: left;
+	height: 70px;
+	width: 430px;
+	padding-left: 25px;
+	background-image: url(images/mission_osu_test1.png);
+	background-repeat: no-repeat;
+	background-position: 0 30px;
+	padding-top: 230px;
+}
+.InSidePageBackground  .OsuSignup  .Test2  {
+	float: left;
+	height: 70px;
+	width: 430px;
+	padding-left: 25px;
+	background-image: url(images/mission_osu_test2.png);
+	background-repeat: no-repeat;
+	background-position: 0 30px;
+	padding-top: 230px;
+}
+.InSidePageBackground  .OsuSignup  .Test3  {
+	float: left;
+	height: 270px;
+	width: 430px;
+	padding-left: 40px;
+	padding-top: 30px;
+}
+.InSidePageBackground   .OsuResourceTitle   {
+	height: 40px;
+	width: 920px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 60px;
+}
+.InSidePageBackground   .OsuResource   {
+	height: 220px;
+	width: 910px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 25px;
+	padding-left: 70px;
+	clear: both;
+	padding-top: 20px;
+}
+.InSidePageBackground   .OsuResource2   {
+	height: 50px;
+	width: 910px;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	line-height: 30px;
+	padding-left: 70px;
+	clear: both;
+}
+.InSidePageBackground  .OsuResource2  .Tab  {
+	float: left;
+	padding-right: 5px;
+	padding-top: 10px;
+}
+.InSidePageBackground  .OsuResource2  .Tab2  {
+	float: left;
+	padding-right: 20px;
+}
+
+.InSidePageBackground .AppliTitle {
+	width: 880px;
+	padding-top: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 80px;
+	padding-bottom: 10px;
+	clear: both;
+}
+.InSidePageBackground .AppliContent {
+	height: 2050px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground  .AppliContent .AppliIntro {
+	background-image: url(images/application_intro.png);
+	background-repeat: no-repeat;
+	height: 450px;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.InSidePageBackground  .AppliContent .AppliDL {
+	height: 200px;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .APP {
+	height: 200px;
+	width: 250px;
+	float: left;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .APPNotice {
+	float: right;
+	width: 520px;
+	height: 200px;
+}
+.InSidePageBackground  .AppliContent  .AppliDL  .APPNotice .Content {
+	height: 145px;
+	width: 520px;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .AppliStepTitle {
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 30px;
+	padding-bottom: 15px;
+	height: 20px;
+	clear: both;
+}
+.InSidePageBackground  .AppliContent  .AppliDL .AppliStepContent {
+	clear: both;
+	height: auto;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.Sepline   {
+	background-image: url(images/sepline.png);
+	background-repeat: no-repeat;
+	height: 7px;
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	clear: both;
+}
+.UIsepline    {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
+
+
+
+.SilverlightLogo {
+	height: auto;
+	width: auto;
+	float: left;
+	clear: left;
+	padding-top: 15px;
+}
+
+
+.Copyright {
+	float: left;
+	height: auto;
+	width: 500px;
+}
+.Social   {
+	float: left;
+	width: 100px;
+	padding-top: 3px;
+}
+.MicrosoftLogo {
+	float: right;
+	padding-top: 7px;
+}
+.InSidePageBackground .Resources {
+	height: 1380px;
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+}
+.InSidePageBackground  .Resources  .Intro {
+	height: 270px;
+	width: 850px;
+	background-image: url(images/resource_intro.png);
+	background-repeat: no-repeat;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground   .Resources   .Intro   .DownloadSL {
+	float: left;
+	padding-top: 186px;
+}
+.InSidePageBackground .Resources .Intro .TestSL {
+	float: right;
+	height: 246px;
+	width: 290px;
+}
+
+.InSidePageBackground .Resources .Intro .TestSL .SL {
+	height: 190px;
+	width: 275px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground .Resources .Intro .TestSL .TestBtn {
+	height: 56px;
+	width: 290px;
+}
+.InSidePageBackground .Resources .HikiTV {
+	height: 550px;
+	width: 840px;
+	margin-right: auto;
+	margin-left: auto;
+	background-image: url(images/resources_hikitv_bg.png);
+	background-repeat: no-repeat;
+}
+.InSidePageBackground .Resources .HikiTV .Video {
+	width: 570px;
+	height: 380px;
+	padding-top: 104px;
+	padding-left: 136px;
+}
+.InSidePageBackground .Resources .HikiTV .Pic {
+	height: 380px;
+	width: 570px;
+	padding-top: 104px;
+	padding-left: 136px;
+}
+
+
+
+
+
+
+.InSidePageBackground .Resources .content {
+	height: 520px;
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 20px;
+	background-image: url(images/resource_content_bg.png);
+	background-repeat: no-repeat;
+	background-position: center 165px;
+}
+.InSidePageBackground    .Resources    .content    .resourcetitle  {
+	background-image: url(images/resource_title.png);
+	background-repeat: no-repeat;
+	height: 50px;
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground   .Resources   .content   .resourcetab  {
+	width: 850px;
+	clear: both;
+	height: 180px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.InSidePageBackground    .Resources    .content    .resourcetab   .resource  {
+	float: left;
+	width: 850px;
+	height: 70px;
+	padding-top: 10px;
+}
+.InSidePageBackground .Resources .content .communitytab {
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+	height: 270px;
+	padding-top: 20px;
+}
+.InSidePageBackground .Resources .content .communitytab .community {
+	width: 300px;
+	height: auto;
+	float: left;
+}
+.InSidePageBackground .Resources .content .communitytab .community .linktab {
+	height: 33px;
+	width: 300px;
+	padding-top: 10px;
+}
+.InSidePageBackground .Resources .content .communitytab .community .linktab .icon {
+	float: left;
+	height: 33px;
+	width: 32px;
+}
+.InSidePageBackground .Resources .content .communitytab .community .linktab .link {
+	height: 26px;
+	width: auto;
+	padding-top: 7px;
+}
+.InSidePageBackground .SisForm {
+	background-image: url(images/sis_title.png);
+	background-repeat: no-repeat;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-position: 50px 40px;
+	height: 810px;
+}
+.InSidePageBackground .SisForm2 {
+	background-image: url(images/sis_title.png);
+	background-repeat: no-repeat;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-position: 50px 40px;
+	height: 550px;
+}
+.InSidePageBackground .SisForm2 .Btn {
+	height: 50px;
+	width: 500px;
+	background-image: url(images/sis_nonsl.png);
+	padding-top: 480px;
+	padding-left: 270px;
+	padding-right: 190px;
+	background-repeat: no-repeat;
+	background-position: 30px 80px;
+}
+
+
+.Desktop {
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+
+.FooterStyle {
+	font-size: 11px;
+	line-height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #666666;
+	text-decoration: none;
+}
+.FooterStyle a:link{
+	color: #009cff;
+	text-decoration: none;
+}
+.FooterStyle a:visited{
+	color: #009cff;
+	text-decoration: none;
+}
+.FooterStyle a:hover{
+	color: #009cff;
+	text-decoration: underline;
+}
+.FooterStyle a:active{
+	color: #666666;
+	text-decoration: none;
+}
+.FooterHalloweenStyle {
+	font-size: 11px;
+	line-height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+}
+.FooterHalloweenStyle a:link{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.FooterHalloweenStyle a:visited{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.FooterHalloweenStyle a:hover{
+	color: #333333;
+	text-decoration: underline;
+}
+.FooterHalloweenStyle a:active{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.CommunityStyle {
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+	font-weight: bold;
+}
+.CommunityStyle a:link{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+	font-weight: bold;
+}
+.CommunityStyle a:visited{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #39A8EA;
+	text-decoration: none;
+	font-weight: bold;
+}
+.CommunityStyle a:hover{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.CommunityStyle a:active{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle {
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle a:link{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle a:visited{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #39A8EA;
+	text-decoration: none;
+	font-weight: bold;
+}
+.DesktopStyle a:hover{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: underline;
+	font-weight: bold;
+}
+.DesktopStyle a:active{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+	font-weight: bold;
+}
+.AppliStyle {
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	text-decoration: none;
+	line-height: 20px;
+}
+.AppliStyle a:link{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+}
+.AppliStyle a:visited{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #39A8EA;
+	text-decoration: none;
+}
+.AppliStyle a:hover{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: underline;
+}
+.AppliStyle a:active{
+	font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #1792DB;
+	text-decoration: none;
+}
