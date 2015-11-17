@@ -22,4 +22,9 @@ git add index.html
 git commit .
 git push origin gh-pages
 ```
+
+### etc
+
+It seems local open of `README.md.html` is the only way to get is rendered ...
+
 <!-- Markdeep: --><style class="fallback">body{white-space:pre;font-family:monospace}</style><script src="markdeep/markdeep.min.js"></script><script src="http://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
