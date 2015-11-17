@@ -22,3 +22,4 @@ git add index.html
 git commit .
 git push origin gh-pages
 ```
+<!-- Markdeep: --><style class="fallback">body{white-space:pre;font-family:monospace}</style><script src="markdeep/markdeep.min.js"></script><script src="http://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
