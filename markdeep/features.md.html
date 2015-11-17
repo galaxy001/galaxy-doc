@@ -1,0 +1,657 @@
+<meta charset="utf-8">
+
+                      **Markdeep Feature Demo**
+                           Morgan McGuire                  
+
+This document shows the features of
+[Markdeep](http://casual-effects.com/markdeep).  Markdeep is a text
+formatting syntax that extends Markdown, and a Javascript program for
+making it work in browsers. The two most powerful features are its
+ability to run in any **web browser** on the client side and the
+inclusion of **diagrams**.
+
+[Click here](features.md.html?noformat) to see this document without
+automatic formatting.
+
+Markdeep is free and easy to use. It doesn't need a plugin, or
+Internet connection. There's nothing to install. Just start
+writing in Vi, Nodepad, Emacs, Visual Studio, Atom, or another
+editor! You don't have to export, compile, or otherwise process
+your document.
+
+Basic Formatting
+=======================================================================================
+Text formatting: **bold**, __bold__, *italic*, _italic_,
+~~strikethrough~~, [hyperlink](http://casual-effects.com), `inline
+code`.
+
+Hyperlinked explicit URL <http://casual-effects.com> and
+e-mail <president@whitehouse.gov>. Even URLs with ? and & in them:
+<http://foo.com/bar?arg=value&hello>.
+
+Markdeep intelligently does not apply bold or italic formatting to
+math expressions such as x = 3 * y - 2 * z or WORDS_WITH_INTERNAL_UNDERSCORES.
+It also protects HTML `<tags>` in code blocks from disappearing.
+
+Lists
+---------------------------------------------------------------------------------------
+Lists and floating diagrams:
+                                                   *****************************
+1. Monday                                          *   A         B         C   *
+2. Tuesday                                         *   *-------->o<------->o   *
+  1. Morning                                       *   ^        / ^        |   *
+  2. Afternoon                                     *   |       v   \       v   *
+3. Wednesday                                       *   o----->o---->o<---->*   *
+  - Bullets                                        *   D      E     F      G   *
+  - Bullets                                        *****************************
+4. Thursday
+5. Friday
+
+Ut at felis diam. Aliquam massa odio, pharetra ut neque sed, commodo
+dignissim orci. Curabitur quis velit gravida, blandit diam nec,
+lacinia quam. Maecenas pharetra, velit in vestibulum auctor, diam
+ipsum suscipit arcu, non sodales orci nibh sit amet leo. Nulla dictum.
+
+- Bread
+- Fish
+- Milk
+- Cheese
+
+> This is an indented blockquote: Ut at felis diam. Aliquam massa odio, pharetra ut neque sed, commodo
+> dignissim orci. Curabitur quis velit gravida, blandit diam nec,
+> lacinia quam. Maecenas pharetra, velit in vestibulum auctor, diam
+> ipsum suscipit arcu, non sodales orci nibh sit amet leo. Nulla dictum
+
+- Level 1
+ - Level 2
+  - Level 3
+- Level 1 again
+
+
+- 1
+ - 1.a
+  - 1.a.i
+  - 1.a.ii
+ - 1.b
+
+Lists can also:
+
+* Use asterisks
+* Instead of
+* Minus signs
+* `or have code`
+* *and* other formatting
+
+or
+
++ Use plus
++ Signs
+
+**************  _Song of Myself: 35_
+*   |    |   *  
+* --+<---+-- *  Would you hear of an old-time sea-fight? <br/>
+*   |    ^   *  Would you learn who won by the light of the moon and stars? <br/>
+*   v    |   *  List to the yarn, as my grandmother's father the sailor told it to me.
+* --+--->+-- *  
+*   |    |   *  Walt Whitman
+**************
+
+
+Images
+------------------------------------------------------------------------------
+
+There's no natural way to embed an image into something that is readable as a text
+document. Markdeep follows markdown's somewhat reasonable syntax:
+
+![A picture of a robot](robot.jpg)
+
+or, just use a raw HTML `<img>` tag, which allows better format control:
+
+<img src="robot.jpg" width="128" border="1"/>
+
+
+Arrows, Dashes, Times
+------------------------------------------------------------------------------
+
+Markdeep converts `==>` and `<==` to arrows if they aren't in a code
+block. Examples:
+
+- if this ==> then that
+- here <== there
+
+If there is an em dash---like that, or an en dash--like that, they will
+be converted to the appropriate character.
+
+An "x" between numbers, such as 1920x1080, will be converted to the times
+symbol.
+
+Negative numbers, such as -5 and minus signs between numbers such as 
+2 - 1, will have a minus sign instead of a hyphen.
+
+Fenced Code Blocks
+------------------------------------------------------------------------------
+
+Fenced code blocks with syntax coloring and automatic programming
+language detection:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+void insertion_sort(int data[], int length) {
+    for (int i = 0; i < length; ++i) {
+
+        for (int j = i; (j > 0) && (data[j] < data[j - 1]); --j) {
+            int temp = data[j];
+            data[j] = data[j - 1];
+            data[j - 1] = temp;
+        }
+
+    }
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Alternative back-tick markup:
+
+````````````````````````````````````
+def insertionSort(data):
+    for i in range(0, len(data)):
+        j = i;
+
+        while (j > 0) and (data[j] < data[j - 1]):
+            temp = data[j]
+            data[j] = data[j - 1]
+            data[j] = temp
+            --j
+````````````````````````````````````
+
+You can even have HTML in a code block:
+
+````````````````````````````````````
+<b>Show this</b> HTML as <i>source</i>,
+<code>not code</code>.
+````````````````````````````````````
+
+LaTeX and other languages that use dollar signs work fine inside code
+fences:
+
+````````````````````````````````````
+$ \int_0^1 x^2 dx $
+
+$$$a = $$$e
+
+````````````````````````````````````
+
+...and of course, Markdeep inside Markdeep:
+
+````````````````````````````````````
+- Do not 
+- Format
+  - this as a **list**!
+````````````````````````````````````
+
+The only pattern that won't work is "`&lt;/`" in a code
+block (for example: "`foo&lt;/dev/null`"), because the
+browser will parse that as a stray HTML closing tag and automatically
+remove it. Use an HTML escape code or just leave a space between "&lt;"
+and "/" to work around this case.
+
+Tables
+------------------------------------------------------------------------------
+
+ Maine | Iowa | Colorado 
+-------|------|----------
+   1   |  4   |   10
+  ME   |  IA  |   CO
+ Blue  | Red  | Brown
+
+
+With alignment:
+
+Item | Type | Cost
+---- |:----:| ----:
+Fish |  F   | 1.00
+Axe  |  W   | 3.25
+Gold |  I   |20.50
+
+
+Definition Lists
+------------------------------------------------------------------------------
+
+Apple
+:   Pomaceous fruit of plants of the genus Malus in 
+    the family Rosaceae.
+
+Orange
+:   The fruit of an evergreen tree of the genus Citrus.
+
+
+Diagrams
+--------------------------------------------------------------------------------
+
+Diagrams can be inserted alongside, as in this      ****************************
+example, or between paragraphs of text as shown     * .---------.              *
+below.                                              * |  Server |<------.      *
+                                                    * '----+----'       |      *
+The diagram parser leaves symbols used as labels    *      |            |      *
+unmodified, so characters like > and ( can appear   *      | DATA CYCLE |      *
+inside of the diagram. In fact, any plain text      *      v            |      *
+may appear in the diagram. In addition to labels,   *  .-------.   .----+----. *
+any un-beautified text will remain in place for     * | Security|  |  File   | *
+use as ASCII art. Thus, the diagram is rarely       * | Policy  +->| Manager | *
+distored by the beautification process.             *  '-------'   '---------' *
+                                                    ****************************
+
+*************************************************************************************************
+*.-------------------.                           ^                      .---.                   *
+*|    A Box          |__.--.__    __.-->         |                      |   |                   *
+*|                   |        '--'               v                      |   |                   *
+*'-------------------'                                                  |   |                   *
+*                       Round                                       *---(-. |                   *
+*  .-----------------.  .-------.    .----------.         .-------.     | | |                   *
+* |   Mixed Rounded  | |         |  / Diagonals  \        |   |   |     | | |                   *
+* | & Square Corners |  '--. .--'  /              \       |---+---|     '-)-'       .--------.  *
+* '--+------------+-'  .--. |     '-------+--------'      |   |   |       |        / Search /   *
+*    |            |   |    | '---.        |               '-------'       |       '-+------'    *
+*    |<---------->|   |    |      |       v                Interior                 |     ^     *
+*    '           <---'      '----'   .-----------.              ---.     .---       v     |     *
+* .------------------.  Diag line    | .-------. +---.              \   /           .     |     *
+* |   if (a > b)     +---.      .--->| |       | |    | Curved line  \ /           / \    |     *
+* |   foo->bar()     |    \    /     | '-------' |<--'                +           /   \   |     *
+* '------------------'     '--'      '--+--------'      .--. .--.     |  .-.     +Done?+-'      *
+*    .---+-----.                        |   ^           |\ | | /|  .--+ |   |     \   /         *
+*    |   |     | Join                   |   | Curved    | \| |/ | |    \    |      \ /          *
+*    |   |     +---->  |                 '-'  Vertical  '--' '--'  '--  '--'        +  .---.    *
+*    '---+-----'       |                                                            |  | 3 |    *
+*                      v                             not:line    'quotes'        .-'   '---'    *
+*                  .---+--------.            /            A || B   *bold*       |        ^      *
+*                 |   Not a dot  |      <---+---<--    A dash--is not a line    v        |      *
+*                  '---------+--'          /           Nor/is this.            ---              *
+*************************************************************************************************
+
+Diagram Examples
+================================================================================
+
+Lines with Decorations
+--------------------------------------------------------------------------------
+*************************************************************************************************
+*                ________                            o        *          *   .--------------.   *
+*   *---+--.    |        |     o   o      |         ^          \        /   |  .----------.  |  *
+*       |   |    '--*   -+-    |   |      v        /            \      /    | |  <------.  | |  *
+*       |    '----->       .---(---'  --->*<---   /      .+->*<--o----'     | |          | | |  *
+*   <--'  ^  ^             |   |                 |      | |  ^    \         |  '--------'  | |  *
+*          \/        *-----'   o     |<----->|   '-----'  |__|     v         '------------'  |  *
+*          /\                                                               *---------------'   *
+*************************************************************************************************
+
+Graph with Large Nodes
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*                                                                                               *
+*   .---.       .-.        .-.       .-.                                       .-.              *
+*   | A +----->| 1 +<---->| 2 |<----+ 4 +------------------.                  | 8 |             *
+*   '---'       '-'        '+'       '-'                    |                  '-'              *
+*                           |         ^                     |                   ^               *
+*                           v         |                     v                   |               *
+*                          .-.      .-+-.        .-.      .-+-.      .-.       .+.       .---.  *
+*                         | 3 +---->| B |<----->| 5 +---->| C +---->| 6 +---->| 7 |<---->| D |  *
+*                          '-'      '---'        '-'      '---'      '-'       '-'       '---'  *
+*************************************************************************************************
+
+
+
+Graph with Small Nodes
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*                 A      1      2     4                        8                                *
+*                  *----->o<---->o<----o-----------.            o                               *
+*                                ^     ^            |           ^                               *
+*                                |     |            |           |                               *
+*                                v     |            v           |                               *
+*                                o<--->*<---->o---->*---->o---->o<---->*                        *
+*                               3     B      5     C     6     7      D                         *
+*************************************************************************************************
+
+
+Flow Chart
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*                                      .                                                        *
+*   .---------.                       / \                                                       *
+*  |   START   |                     /   \        .-+-------+-.      ___________                *
+*   '----+----'    .-------.    A   /     \   B   | |COMPLEX| |     /           \      .-.      *
+*        |        |   END   |<-----+CHOICE +----->| |       | +--->+ PREPARATION +--->| X |     *
+*        v         '-------'        \     /       | |PROCESS| |     \___________/      '-'      *
+*    .---------.                     \   /        '-+---+---+-'                                 *
+*   /  INPUT  /                       \ /                                                       *
+*  '-----+---'                         '                                                        *
+*        |                             ^                                                        *
+*        v                             |                                                        *
+*  .-----------.                 .-----+-----.        .-.                                       *
+*  |  PROCESS  +---------------->|  PROCESS  |<------+ X |                                      *
+*  '-----------'                 '-----------'        '-'                                       *
+*************************************************************************************************
+
+Line Ends
+--------------------------------------------------------------------------------
+
+
+*************************************************************************************************
+*                                                                                               *
+*   o--o    *--o     /  /   *  o  o o o o   * * * *   o o o o   * * * *      o o o o   * * * *  *
+*   o--*    *--*    v  v   ^  ^   | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /   *
+*   o-->    *-->   *  o   /  /    o * v '   o * v '     o * v \   o * v \  o * v /   o * v /    *
+*   o---    *---                                                                                *
+*                                 ^ ^ ^ ^   . . . .   ^ ^ ^ ^   \ \ \ \      ^ ^ ^ ^   / / / /  *
+*   |  |   *  o  \  \   *  o      | | | |   | | | |    \ \ \ \   \ \ \ \    / / / /   / / / /   *
+*   v  v   ^  ^   v  v   ^  ^     o * v '   o * v '     o * v \   o * v \  o * v /   o * v /    *
+*   *  o   |  |    *  o   \  \                                                                  *
+*                                                                                               *
+*   <--o   <--*   <-->   <---      ---o   ---*   --->   ----      *<--   o<--   -->o   -->*     *
+*                                                                                               *
+*************************************************************************************************
+
+
+************************************************
+*               \     \  |  /     /            *
+*                \     v v v     /             *
+*                 \ .---------. /     \ | /    *
+*                  v|         |v       vvv     *
+*               --->|         |<---  -->o<--   *
+*                  ^|         |^       ^^^     *
+*                 / '---------' \     / | \    *
+*                /     ^ ^ ^     \             *
+*               /     /  |  \     \            *
+************************************************
+
+Trees
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*                                                                                               *
+*          .               .                .               .--- 1          .-- 1     / 1       *
+*         / \              |                |           .---+            .-+         +          *
+*        /   \         .---+---.         .--+--.        |   '--- 2      |   '-- 2   / \ 2       *
+*       +     +        |       |        |       |    ---+            ---+          +            *
+*      / \   / \     .-+-.   .-+-.     .+.     .+.      |   .--- 3      |   .-- 3   \ / 3       *
+*     /   \ /   \    |   |   |   |    |   |   |   |     '---+            '-+         +          *
+*     1   2 3   4    1   2   3   4    1   2   3   4         '--- 4          '-- 4     \ 4       *
+*                                                                                               *
+*************************************************************************************************
+
+
+Circuits
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*                                 ____                      *                                   *
+*                                |    |_____.---.           |                                   *
+*                                o     _____|    )----------)-------.                           *
+*                               / \   |     '---'           |     __|__                         *
+*                              /___\  |                     |     \   /                         *
+*                                |    '-------------.       |      \ /                          *
+*              A ----------------'                  |       |       o                           *
+*                   .-------------------.     o-----)-------'       |                           *
+*                   |                   |___.---.   |               |___.---.                   *
+*              B ---*---.__.---.         ___|    )--*--.__..---.     ____)   )----- Y           *
+*                        __|    o----*--'   '---'    ______))   )---'   '---'                   *
+*              C -------'  '---'     |              |     ''---'                                *
+*                                    |              o                                           *
+*                                    |             / \                                          *
+*                                    |            /___\                                         *
+*                                    |              |                                           *
+*                                    '--------------'                                           *
+*************************************************************************************************
+
+
+Big Shapes
+--------------------------------------------------------------------------------
+*************************************************************************************************
+*                                                                                               *
+*          .---------.   .   .-------.        .-------.   .---------.    .-----.      .----.    *
+*           \       /   / \   \       \      |         |  |         |   /       \    /      \   *
+*            \     /   /   \   \       \     |         |  |         |  /         \  |        |  *
+*             \   /   /     \   \       \    |         |  |         |  \         /  |        |  *
+*              \ /   /       \   \       \   |         |  |         |   \       /    \      /   *
+*               '   '---------'   '-------'   '-------'   '---------'    '-----'      '----'    *
+*                                                                                               *
+*************************************************************************************************
+
+
+Small Shapes
+--------------------------------------------------------------------------------
+*************************************************************************************************
+*                               .---.                                                 __    ..  *
+*  .--.     .  .-----.           \ /   .---.                    .---.    ___    ___  |  |   | ) *
+* /    \   / \  \   /  .-.    .   ' .  |   |   .---. .---.     |     |  /   \  |   | '--'   ''  *
+* \    /  /   \  \ /  |   |  / \   / \ '---'  /   /   \   \    |     |  \___/  |___|    ..  __  *
+*  '--'  '-----'  '    '-'  '---' /___\      '---'     '---'    '---'                  ( | |__| *
+*                                                                                       ''      *
+*************************************************************************************************
+
+
+Overlaps and Intersections
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*                                                                                               *
+*           .-.           .-.           .-.           .-.           .-.           .-.           *
+*          |   |         |   |         |   |         |   |         |   |         |   |          *
+*       .---------.   .--+---+--.   .--+---+--.   .--|   |--.   .--+   +--.   .------|--.       *
+*      |           | |           | |   |   |   | |   |   |   | |           | |   |   |   |      *
+*       '---------'   '--+---+--'   '--+---+--'   '--|   |--'   '--+   +--'   '--|------'       *
+*          |   |         |   |         |   |         |   |         |   |         |   |          *
+*           '-'           '-'           '-'           '-'           '-'           '-'           *
+*************************************************************************************************
+
+
+
+Big Grids
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*    .----.        .----.                                                                       *
+*   /      \      /      \            .-----+-----+-----.                                       *
+*  +        +----+        +----.      |     |     |     |          .-----+-----+-----+-----+    *
+*   \      /      \      /      \     |     |     |     |         /     /     /     /     /     *
+*    +----+   B    +----+        +    +-----+-----+-----+        +-----+-----+-----+-----+      *
+*   /      \      /      \      /     |     |     |     |       /     /     /     /     /       *
+*  +   A    +----+        +----+      |     |  B  |     |      +-----+-----+-----+-----+        *
+*   \      /      \      /      \     +-----+-----+-----+     /     /  A  /  B  /     /         *
+*    '----+        +----+        +    |     |     |     |    +-----+-----+-----+-----+          *
+*          \      /      \      /     |  A  |     |     |   /     /     /     /     /           *
+*           '----'        '----'      '-----+-----+-----'  '-----+-----+-----+-----+            *
+*                                                                                               *
+*************************************************************************************************
+
+
+Small Grids
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*       ___     ___    ________    .---+---+---+---+---.     .---+---+---+---.  .---.   .---.   *
+*   ___/   \___/   \  |__|__|__|   |   |   |   |   |   |    / \ / \ / \ / \ /   |   +---+   |   *
+*  /   \___/   \___/  |__|__|__|   +---+---+---+---+---+   +---+---+---+---+    +---+   +---+   *
+*  \___/ b \___/   \  |__|__|__|   |   |   | b |   |   |    \ / \a/ \b/ \ / \   |   +---+   |   *
+*  / a \___/   \___/  |__|__|__|   +---+---+---+---+---+     +---+---+---+---+  +---+ b +---+   *
+*  \___/   \___/   \  |__|__|__|   |   | a |   |   |   |    / \ / \ / \ / \ /   | a +---+   |   *
+*      \___/   \___/  |__|__|__|   '---+---+---+---+---'   '---+---+---+---'    '---'   '---'   *
+*                                                                                               *
+*************************************************************************************************
+
+Graphics Diagram
+-------------------------------------------------------------------------------
+*************************************************************************************************
+*                                                                             .                 *
+*    0       3                          P *              Eye /         ^     /                  *
+*     *-------*      +y                    \                +)          \   /  Reflection       *
+*  1 /|    2 /|       ^                     \                \           \ v                    *
+*   *-------* |       |                v0    \       v3           --------*--------             *
+*   | |4    | |7      |                  *----\-----*                                           *
+*   | *-----|-*       +-----> +x        /      v X   \          .-.<--------        o           *
+*   |/      |/       /                 /        o     \        | / | Refraction    / \          *
+*   *-------*       v                 /                \        +-'               /   \         *
+*  5       6      +z              v1 *------------------* v2    |                o-----o        *
+*                                                               v                               *
+*************************************************************************************************
+
+
+Icon Diagram
+--------------------------------------------------------------------------------
+
+*************************************************************************************************
+*                                      .-.                           .--------.                 *
+*                                   .-+   |                         |          |                *
+*                               .--+       '--.                     |'--------'|                *
+*                              |  Server Cloud |<------------------>| Database |                *
+*                               '-------------'                     |          |                *
+*                                   ^      ^                         '--------'                 *
+*                    Internet       |      |                              ^                     *
+*          .------------------------'      '-------------.                |                     *
+*          |                                             |                v                     *
+*          v                                             v              .------.       .------. *
+*     .--------.      WiFi     .--------.  Bluetooth  .-----.          / #  # /|      / #  # /| *
+*     |        |<------------->|        |<---------->|       |        +------+/| LAN +------+/| *
+*     |Windows |               |  OS X  |            |  iOS  |        |      +/|<--->|      +/| *
+*     +--------+               +--------+            |       |        |Ubuntu+/|     |Ubuntu+/| *
+*    /// ____ \\\             /// ____ \\\           |   o   |        |      +/      |      +/  *
+*   '------------'           '------------'           '-----'         '------'       '------'   *
+*      Laptop 1                 Laptop 2              Tablet 1         Dedicated Server Rack    *
+*************************************************************************************************
+
+Various Syntaxes for Horizontal Rules
+------------------------------------------------------------------------------------
+
+The following are all produced by different patterns in the source:
+
+-----
+
+- - -
+
+_____
+
+_ _ _
+
+*****
+
+* * *
+
+Embedded Math
+========================
+
+Markdeep automatically includes [MathJax](http://mathjax.org) if your
+document contains equations and you have an Internet connection. That means
+you get the **full power of LaTeX, TeX, MathML, and AsciiMath notation**.
+Just put math inside single or double dollar signs. 
+
+$$ \Lo(X, \wo) = \Le(X, \wo) + \int_\Omega \Li(X, \wi) ~ f_X(\wi, \wo) ~ | \n \cdot \wi | ~ d\wi $$
+
+You can also use LaTeX equation syntax directly to obtain numbered
+equations:
+
+\begin{equation}
+e^{i \pi} + 1 = 0
+\end{equation}
+
+\begin{equation}
+\mathbf{A}^{-1}\vec{b} = \vec{x}
+\end{equation}
+
+If you don't have equations in your document, then Markdeep won't
+connect to the MathJax server. Either way, it runs MathJax after 
+processing the rest of the document, so there is no delay.
+
+Markdeep is smart enough to distinguish non-math use of dollar signs,
+such as $2.00 and $4.00 on the same line. Note that inline
+math requires a space after the dollar sign to distinguish it from
+regular text usage.
+
+Unless you've changed out the default MathJax processor, you can define 
+your own LaTeX macros by executing `\newcommand` within dollar signs,
+just as you would in LaTeX.  Markdeep provides a handful of commands
+defined this way by default because they're things that I frequently 
+need:
+
+   Code            |   Symbol
+-------------------|------------
+ `\O(n)`           |  $ \O(n) $
+ `\mathbf{M}^\T`   |  $ \mathbf{M}^\T$
+ `45\degrees`      |  $ 45\degrees$
+ `x \in \Real`     |  $ x \in \Real$
+ `x \in \Integer`  |  $ x \in \Integer$
+ `x \in \Boolean`  |  $ x \in \Boolean$
+ `x \in \Complex`  |  $ x \in \Complex$
+ ` \n `            |  $ \n $
+ ` \w `            |  $ \w $
+ ` \wo `           |  $ \wo $
+ ` \wi `           |  $ \wi $
+ ` \wh `           |  $ \wh $
+ ` \Li `           |  $ \Li $
+ ` \Lo `           |  $ \Lo $
+ ` \Lr `           |  $ \Lr $
+ ` \Le `           |  $ \Le $
+
+
+# Headers
+In addition to the underlined headers, you can also use ATX-style
+headers, with multiple # signs:
+
+## H2
+### H3
+#### H4
+##### H5
+###### H6
+Although: do you really need six levels of subsection nesting?!
+
+
+Custom Formatting
+=========================================================================
+
+Markdeep uses CSS for styling. That means you can embed a style sheet
+to override anything thatn you don't like about the built-in styling.
+For example, if you don't want section numbering, just use:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<style>h1:before, h2:before { content: none; }</style>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Markdeep uses Markdown's syntax, even where I disagree with the
+choices.  But you aren't stuck with that. Do you wish that Markdown
+had specified single-asterisk for `*bold*`? You can have
+that:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<style>em.asterisk { font-style: normal; font-weight: bold; }</style>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Unicode (in UTF-8 encoding)
+===================================================
+
+To support Unicode input, you must add <`meta charset="utf-8"`> to
+the *top* of your document (in the first 512 bytes).
+
+- Asian characters 林花謝了春紅 太匆匆, 無奈朝來寒雨 晚來風 胭脂淚 留人醉 幾時重, 自是人生長恨 水長東
+- Asian punctuation:　、。！，：
+- Matching pairs «»‹›“”‘’〖〗【】「」『』〈〉《》〔〕
+- Greek ΑΒΓΔ ΕΖΗΘ ΙΚΛΜ ΝΞΟΠ ΡΣΤΥ ΦΧΨΩ αβγδ εζηθ ικλμ νξοπ ρςτυ φχψω
+- Currency  ¤ $ ¢ € ₠ £ ¥
+- Common symbols © ® ™ ² ³ § ¶ † ‡ ※
+- Bullets •◦ ‣ ✓ ●■◆ ○□◇ ★☆ ♠♣♥♦ ♤♧♡♢
+- Phonetic ᴁ ᴂ ᴈ
+- Music ♩♪♫♬♭♮♯
+- Punctuation “” ‘’ ¿¡ ¶§ª - ‐ ‑ ‒ – — ― …
+- Accents àáâãäåæç èéêë ìíîï ðñòóôõö øùúûüýþÿ ÀÁÂÃÄÅ Ç ÈÉÊË ÌÍÎÏ ÐÑ ÒÓÔÕÖ ØÙÚÛÜÝÞß 
+- Math ° ⌈⌉ ⌊⌋ ∏ ∑ ∫ ×÷ ⊕ ⊖ ⊗ ⊘ ⊙ ⊚ ⊛ ∙ ∘ ′ ″ ‴ ∼ ∂ √ ≔ × ⁱ ⁰ ¹ ² ³ ₀ ₁ ₂ π ∞ ± ∎
+- Logic & Set Theory ∀¬∧∨∃⊦∵∴∅∈∉⊂⊃⊆⊇⊄⋂⋃
+- Relations ≠≤≥≮≯≫≪≈≡
+- Sets ℕℤℚℝℂ
+- Arrows ←→↑↓ ↔ ↖↗↙↘  ⇐⇒⇑⇓ ⇔⇗  ⇦⇨⇧⇩ ↞↠↟↡ ↺↻  ☞☜☝☟
+- Computing ⌘ ⌥ ‸ ⇧ ⌤ ↑ ↓ → ← ⇞ ⇟ ↖ ↘ ⌫ ⌦ ⎋⏏ ↶↷ ◀▶▲▼ ◁▷△▽ ⇄ ⇤⇥ ↹ ↵↩⏎ ⌧ ⌨ ␣ ⌶ ⎗⎘⎙⎚ ⌚⌛ ✂✄ ✉✍
+- Digits ➀➁➂➃➄➅➆➇➈➉
+- Religious and cultural symbols ✝✚✡☥⎈☭☪☮☺☹☯☰☱☲☳☴☵☶☷
+- Dingbats ❦☠☢☣☤♲♳⌬♨♿ ☉☼☾☽ ♀♂ ♔♕♖ ♗♘♙ ♚♛ ♜♝♞♟
+
+
+<!-- Markdeep: --><style class="fallback">body{white-space:pre;font-family:monospace}</style><script src="markdeep.min.js"></script><script src="http://casual-effects.com/markdeep/latest/markdeep.min.js"></script>
