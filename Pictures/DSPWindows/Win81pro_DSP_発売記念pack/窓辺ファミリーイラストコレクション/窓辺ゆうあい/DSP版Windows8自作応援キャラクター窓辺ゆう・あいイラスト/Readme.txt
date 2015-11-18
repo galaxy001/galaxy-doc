@@ -1,3 +1,5 @@
+http://www.windows-naviplus.jp/campaign/win8/
+
 原文件（”DSP版Windows8.1Pro発売記念パック.iso“）在日文Win10下也显示异常，为“DSP版Windows8自作応援キャラクター窓辺ゆう_あいイラスト#A682”。
 Linux下显示为：“./窓辺ファミリーイラストコレクション/窓辺ゆうあい/DSP版Windows8自作応援キャラクター窓辺ゆう\?あいイラスト/”。
 目录内都是空的。
