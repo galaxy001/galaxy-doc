@@ -1,2 +1,4 @@
 proxychains -q wget -mkEpnp http://suishoshizuku.com
 
+httrack http://suishoshizuku.com/en/ http://suishoshizuku.com/ http://suishoshizuku.com/ja/  -O "./websites/suishoshizuku"  -%v
+
