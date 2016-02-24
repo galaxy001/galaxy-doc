@@ -52,8 +52,8 @@
 }
 .top_mini1000{
 	position: absolute;
-	left: 923px;
-	top: 530px;
+	left: 935px;
+	top: 555px;
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s;
@@ -117,28 +117,32 @@
 	left:326px;
 	top:722px;
 }
-
-/*1周年*/
 #top_chara{
 	position: absolute;
-	top: 122px;
-	left: 294px;
+	top: 121px;
+	left: 214px;
 }
 #top_chara_white{
 	position: absolute;
-	top: 106px;
-	left: 281px;
+	top: 121px;
+	left: 214px;
 }
 #top_txt1{
 	position: absolute;
-	top: 166px;
-	left: 621px;
+	top: 144px;
+	left: 620px;
 }
 #top_txt2{
 	position: absolute;
-	top: 282px;
-	left: 789px;
+	top: 224px;
+	left: 844px;
 }
+#top_pv{
+	position: absolute;
+	top: 361px;
+	left: 747px;
+}
+
 .top_shortdrama_ttl{
 	text-align:center;
 	position:relative;
@@ -147,7 +151,7 @@
 	background:url(../images/top/shortdrama_bg.png) no-repeat 0 0;
 	margin-top:-85px;
 	padding-top:95px;
-	height:171px;
+	height:150px;
 }
 .top_shortdrama_btn{
 	width:168px;

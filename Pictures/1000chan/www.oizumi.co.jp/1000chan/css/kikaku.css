@@ -110,9 +110,42 @@ a{
 	display:inline;
 	zoom:1;
 }
-.kikau_bnr {
+.kikaku_layout_1 {
 	text-align: center;
 	margin-top: 15px;
+}
+
+/*企画ページ　テキスト*/
+.kikaku_layout_text_w {
+	width: 1029px;
+	margin-top: 20px;
+	background-color: #FFFFFF;
+	margin-left: 0px;
+	position: relative;
+	left: 48px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.kikaku_layout_text1 {
+	width: 800px;
+	margin-top: 15px;
+	margin-left: auto;
+	position: relative;
+	margin-right: auto;
+}
+.kikaku_txt{
+	color: #000000;
+	font-size: 16px;
+}
+.kikaku_txtb{
+	color: #000000;
+	font-size: 16px;
+	font-weight: bold;
+}
+/*企画ページ　テキスト*/
+.kikaku_layout_2{
+	text-align:center;
+	margin-top: 30px;
 }
 .answer_bnr{
 	margin-top:30px;
@@ -141,4 +174,36 @@ a{
 	font-size: 13px;
 	margin-top: 10px;
 }
-	
+#kikaku_album{
+	text-align:center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#kikaku{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+#kikaku_menu{
+	float: left;
+	margin-left:15px;
+	margin-right: 23px;
+	width: 267px;
+}
+#kikaku_menu li{
+	margin-bottom: 10px;
+}
+#kikaku_contents{
+	float: left;
+	width: 781px;
+}
+#kikaku_ttl{
+	margin-bottom: 20px;
+}
+#cd_wrap{
+	position:relative;
+}
+#cd_pv{
+	position: absolute;
+	left: 40px;
+	top: 320px;
+}

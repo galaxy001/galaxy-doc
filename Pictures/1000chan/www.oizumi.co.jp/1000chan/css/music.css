@@ -25,6 +25,11 @@
 	margin-right:25px;
 	float:left;
 }
+.music_center2{
+	width:410px;
+	margin-right:25px;
+	float:left;
+}
 .music_right{
 	width:333px;
 	float:left;
@@ -46,9 +51,6 @@ p.music_txt2{
 .music_bnr{
 	margin-top:10px;
 }
-.music_onpu{
-	margin-top:-50px;
-}
 .music_bnr2{
 	margin-top:10px;
 	float:left;
@@ -57,4 +59,7 @@ p.music_txt2{
 .music_bnr3{
 	float:left;
 }
-	
+.music_link_txt{
+	font-size: 16px;
+	color: #0078ff;
+}

@@ -58,6 +58,10 @@
 	text-align:center;
 	margin-top: 10px;
 }
+.drama_bnr{
+	text-align:center;
+	margin-top: 10px;
+}
 .drama_backnumbers{
 	width:928px;
 	margin:0 auto;
@@ -95,7 +99,15 @@
 	border-right: none;
 }
 .drama_backnumber_txt{
-	font-size: 14px;
+	font-size: 13px;
 	line-height: 1.2;
-	margin-top:3px;
+	margin-top: 3px;
+}
+.drama_subttl{
+	color: #0396fd;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+.ttlbox{
+ 	width: 930px;
 }

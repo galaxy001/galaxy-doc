@@ -3,12 +3,10 @@ $(function(){
 	$m2=$('#top_chara_white');
 	$m3=$('#top_txt1');
 	$m4=$('#top_txt2');
-	
 	$m1.css({opacity:0});
 	$m2.css({opacity:0});
 	$m3.css({opacity:0});
 	$m4.css({opacity:0});
-
 })
 
 $(window).load(function(){
@@ -17,12 +15,13 @@ $(window).load(function(){
 	
 	$m3.css({
 		left:$m3.posi.left-200,
-		top:$m3.posi.top+10
+		top:$m3.posi.top+20
 	})
 	$m4.css({
 		left:$m4.posi.left-150,
 		top:$m4.posi.top-5
 	})
+	
 	
 	tame=500;
 	
@@ -57,6 +56,7 @@ $(window).load(function(){
 			top:$m4.posi.top
 		},1000,'easeInOutElastic');
 	},tame+1500)
+	
 	
 	
 })

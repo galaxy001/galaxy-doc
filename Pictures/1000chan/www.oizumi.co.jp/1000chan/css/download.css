@@ -5,16 +5,16 @@ a{
 	width:1122px;
 	margin:0 auto;
 	padding-bottom:20px;
-	position:relative;
+	position: relative;
 }
 .download_img{
 	position:absolute;
-	left:454px;
 	top:125px;
+	left:450px;
 }
 .download_box1{
 	width: 770px;
-	margin: 15px 0 0 40px;
+	margin: 50px 0 0 40px;
 	background: #fff;
 	position: relative;
 	padding: 15px 0 0 30px;
@@ -39,7 +39,7 @@ a{
 }
 .download_box2{
 	width:770px;
-	margin:50px 0 0 40px;
+	margin:10px 0 0 40px;
 	background:#fff;
 	position:relative;
 	padding: 15px 0 0 30px;
@@ -47,6 +47,13 @@ a{
 .download_item2{
 	float:left;
 	margin-right:25px;
+	padding-bottom:18px;
+	display:inline;
+	text-align:center;
+}
+.download_item3{
+	float:left;
+	margin-right:22px;
 	padding-bottom:18px;
 	display:inline;
 	text-align:center;
