@@ -74,3 +74,21 @@ http://www.kddi-webcommunications.co.jp/recruit/career.html
                    ======>#=    +>>>/%+%+#/%=   =>#=          ===              
 
 -->
+
+<hr>
+
+view-source:http://www.cloudcore.jp/kumonocoa2012/
+
+<!-- #content -->
+<div id="content">
+  <div id="featureArea02">
+  <div id="comment">
+    <p class="fsize">ご訪問ありがとうございます。</p>
+    <p>2012四月馬鹿（雲野コア特設サイト）は2013年3月31日をもちまして終了いたしました。</p>
+    <p><a href="http://www.cloudcore.jp/">CloudCore VPSトップへ</a></p>
+    </div>
+  </div>
+  <!-- #main -->
+  <!-- /#main -->
+</div>
+<!-- /#content -->
