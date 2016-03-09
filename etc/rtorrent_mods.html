@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="ROBOTS" content="NOARCHIVE" charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://calomel.org/calomel_rss.xml">
+<link rel="icon" sizes="16x16" type="image/png" href="data:image/png;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///8A////AL+AEBDJgBfvyYEY/8mBGP/JgRj/yYAWUMmAF+/JgRj/yIAWn////wD///8A////AP///wD///8A////AP///wDHgBiAyYEY/8mBGP/JgRj/x4AYYP///wDJgRj/yYEY/8mBGP/IgBaf////AP///wD///8A////AP///wD///8AyIAX38mBGP/JgRj/x4AYYP///wD///8AyIAX38mBGP/JgRj/yYEY/8iAF3D///8A////AP///wD///8AyYAWUMmBGP/JgRj/yYAXz////wD///8A////AP///wDHgBhAx4AYgMeAGIDFgBUw////AP///wD///8A////AMeAGIDJgRj/yYEY/8mBGP/IgBaf////AP///wD///8A////AP///wD///8A////AMeAGCDIgBe/x4AYYP///wC/gBAQyIAXv8mBGP/JgRj/yYEY/8mBGP/JgRj/yIAX3////wD///8A////AP///wC/gBAQyYAX78mBGP/JgBfvx4AYgP///wDHgBggyIAXcMiAF9/JgRj/yYEY/8mAF+////8A////AP///wD///8A////AMWAFTDJgBfvyYAXz7+AEBDIgBePx4AYIP///wD///8Ax4AYQMeAGIDFgBUw////AP///wD///8A////AP///wD///8A////AP///wDHgBhgyYEY/8eAGEC/gBAQxYAVMP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AyIAX38mAF++/gBAQyIAWn8iAF7////8AyIAXv8iAF6////8A////AP///wD///8A////AP///wD///8A////AMmBGP/IgBdw////AMmAF+/IgBe/////AMmBGP/IgBe/////AP///wD///8A////AP///wD///8A////AMmAF8/IgBeP////AP///wDJgRj/x4AYgP///wDJgBfvyIAXj////wD///8A////AP///wD///8A////AP///wDJgRj/x4AYYP///wD///8Ax4AYQL+AEBD///8AxYAVMMeAGCD///8A////AP///wD///8A////AP///wD///8AyIAXcP///wD///8AyIAXr8mAF+////8A////AMmBGP/IgBe/////AP///wD///8A////AP///wD///8A////AP///wD///8A////AMmAF+/JgBfP////AP///wDJgBfvx4AYgP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wDIgBdwxYAVMP///wD///8A////AP///wD///8A////AP///wD///8A////AP///wD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" />
+<title>rTorrent research, hacks and optimization @ Calomel.org</title>
+<base href="https://calomel.org/">
+
+<style type="text/css">
+body {
+color:#FFFFFF;
+display:block;
+font-family: "Verdana", "sans-serif";
+margin:0 auto;
+overflow:auto;
+overflow-x:hidden;
+padding:0px;
+background:#FFFFFF url("/calomel_image.jpg");
+background-size:100% auto;
+background-attachment:fixed;
+background-position:top center;
+background-repeat:no-repeat;
+}
+
+img {
+border:0;
+height:auto;
+max-width:100%;
+outline:none;
+padding-left:5em;
+padding-right:5em;
+}
+
+hr { border:0; border-top:1px solid #E0E0E0; width:70%; }
+
+h2 { color:#707070; padding:3em 0em 0em 0em; }
+h3 { color:#606060; padding:3em 0em 0em 0em; }
+
+p { padding:1em 0em 0.5em 0em; }
+
+ul li { padding:0em 0em 0.5em 0em;}
+
+.boxiconbottom {
+padding:10% 0% 15% 0%;
+text-align:center;
+background:#FFFFFF;
+}
+
+.boxcenter {
+background-color:#FFF;
+color:#303030;
+font-size: 100%;
+line-height:1.5;
+margin:45% auto 0% auto;
+padding:0% 10% 5% 10%;
+word-wrap: break-word;
+}
+
+.boxcenter a:link { color:#0000FF; text-decoration:none; }
+.boxcenter a:hover { color:#0000FF; text-decoration:underline; }
+
+.code {
+background-color:#E8E8E8;
+border:1px inset;
+color:#4d3e32;
+font-family: "monospace";
+font-size: 100%;
+line-height:1.5;
+margin:0.5em auto 0.5em auto;
+max-height:700px;
+overflow:auto;
+word-wrap: normal;
+padding:1em;
+}
+
+.note {
+background: #E8E8E8;
+border-radius: 1em 1em 1em 1em;
+box-shadow: 0 10px 10px rgba(0,0,0,0.3), -10px 10px 10px rgba(0,0,0,0.2);
+color: #000000;
+font-size: 100%;
+line-height:1.5;
+margin: 10em auto;
+overflow: hidden;
+padding: 1em 1.5em;
+position: relative;
+width: 70%;
+word-wrap: break-word;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div style="text-align:left" class="boxcenter">
+
+<div style="text-align:left; float:left;"><a style="color:#B8B8B8; padding-right:2em;" href="/">home</a> <a style="color:#B8B8B8; padding-right:2em;" href="/calomel_rss.xml">rss</a> <a style="color:#B8B8B8; padding-right:2em;" href="https://encrypted.google.com/search?&q=site%3Acalomel.org&btnG=Search">search</a></div>
+
+
+<div style="text-align:right; color:#B8B8B8; float:right">January 03, 2014</div>
+
+<h1 style="text-align:center; color:#707070; padding:5em 0em 0em 0em;">rTorrent research</h1>
+<hr>
+<h3 style="text-align:center; color:#707070; padding:0em 0em 4em 0em;">security modifications and other hacks for usability</h3>
+
+
+<p>rTorrent is a bittorrent program allowing one to share files
+with many people in order to better distribute band with among many peers. This
+model is very successful and a very easy way to get open source OS
+distributions and other data to many people while relieving the bandwidth load
+from the original source.</p>
+
+<p>The problem with bittorrent programs are not the client or the server, but the
+implementation of trust between the server and client. In practice it is never
+safe to trust the client especially when you are limiting access of the client
+depending on the client's response.</p>
+
+<p>For example, there are tracker sites limiting clients depending on client
+name or version number. These sites also try limiting clients by their upload
+and download rates also called the client ratio. All of these values are easily
+modified on the client side to tell the server what ever one wanted the server
+to know. We can tell the server we are one client when we are actually another
+and we can easily adjust our ratios by telling the server we transferred 25x
+more than we really did thus inflate the client ratio. The server is
+trusting our client so we are now in control.
+
+<p>While researching torrent software it is painfully clear the original
+designer never envisioned the protocol to be used anywhere except a completely
+trusted network. These mods are _not_ only applicable to rTorrent, but to all
+bittorrent clients if you have the source code. The following examples are some
+simple exercises proving a bittorrent client's ability.</p>
+
+
+<p>
+<div class="note">
+<a href="/aria2.html">Aria2</a> is now our preferred bit torrent client instead of
+rTorrent due to rTorrent's slow future development, many open bugs and
+incompatibility with FreeBSD's clang compiler. We have an <a
+href="/aria2.html">aria2 tutorial</a> if you wish to switch to aria2.
+</div>
+</p>
+
+
+
+<h2>Building rTorrent from source allows for customization</h2>
+
+<p>If you are interested in researching these mods yourself this is how we are
+going to build the libtorrent and rTorrent binaries from source.  Even though
+we may be using a different version of rTorrent than you have you should be
+able to figure out the same mods for any newer distributions. You can also
+download any version of rTorrent from the <a
+href="http://libtorrent.rakshasa.no/downloads/">rTorrent downloads
+repository</a>. The version(s) of libtorrent and rTorrent used on this page are
+clearly labeled in each following example. Make sure to use the proper
+complimenting versions on rtorrent and libtorrent.
+
+
+<pre class="code">
+libtorrent build: ./configure && make && make install
+
+rtorrent build: ./configure && make && make install
+
+NOTE: Tips on installing rTorrent for OpenBSD with support for
+      DHT and Encryption can be found further down on this page.
+</pre>
+
+
+<p>Let's take a look at some of the mods and hacks we can use.</p>
+
+</p>
+
+
+
+
+<h2>Change the upload ratio reported to tracker servers.</h2>
+
+<p>One of the ways to limit a client's access to servers is to initiate a
+upload to download ratio.  The idea is a client will not be able to take if
+they do not give. This works by our client sending the server the amount of
+data it uploaded to other clients. This upload value is not verified by any
+other client and is not validated by an other means. This is _not_ a secure or
+trusted way to limit client access and is easy to change if one wished. In this
+example we will be reporting our upload ratio times a factor of 25. 
+
+<p>If the actual amount of data uploaded from our client to other clients is
+100MB and the amount of data we downloaded is 500MB then our ratio would be
+(100MB/500MB) = 0.2 or 20%. In this exercise we will instead be reporting to
+the server that we uploaded (100MB * 25) = 2500MB and downloaded 500MB. The
+server then records our ratio as (2500MB/500MB) = 5 or 500% which is 25 times
+the true upload ratio. With this technique you would never need to worry about
+ratios ever again. Also, this mod will not change the values you see in the
+local client, only what our client reports to the tracker.</p>
+
+
+<pre class="code">
+# Report our upload ratio 25 times higher than true
+
+edit file:  vi libtorrent-0.12.5/src/tracker/tracker_http.cc
+ old line #:130  s &lt;&lt; "&uploaded=" &lt;&lt; info-&gt;uploaded_adjusted()
+ new line #:130  s &lt;&lt; "&uploaded=" &lt;&lt; 25*info-&gt;uploaded_adjusted()
+
+-OR-
+
+edit file:  vi libtorrent-0.12.3/src/tracker/tracker_http.cc
+ old line #:130  s &lt;&lt; "&uploaded=" &lt;&lt; info-&gt;uploaded_adjusted()
+ new line #:130  s &lt;&lt; "&uploaded=" &lt;&lt; 25*info-&gt;uploaded_adjusted()
+
+-OR-
+
+edit file:  vi libtorrent-0.11.9/src/tracker/tracker_http.cc
+ old line #:126 s &lt;&lt; "&uploaded=" &lt;&lt; up
+ new line #:126 s &lt;&lt; "&uploaded=" &lt;&lt; (up*25)
+</pre>
+
+<p><b>Note: </b>Some trackers look at the upload to download ratio to try to
+find out if someone is ratio hacking. In the example we used the multiplier of
+25, but you can use any equation you can come up with. Perhaps you want to use
+the amount you downloaded plus the uploaded amount (down+up). Something like
+"(down+up) would make the upload value increase as you downloaded more data.
+How about "(up*1.234+up*1.1)". Also, the value "left" is used to report to the
+tracker on how much of the torrent is still left to download. This can also be
+used in your equation. Note that the using the divisor symbol "\" might not
+work, stick with addition "+", subtraction "-" and multiplication "*" only. Use
+your imagination.</p>
+
+</p>
+
+
+
+<h2>Change our client's reported identity.</h2>
+
+<p>The remote clients and servers all ask our client what its the peer name,
+also called the peer_id or identity is. Some servers actually limit the clients
+that can connect by looking at this string. It is not a recommended practice to
+limit client access by asking the client for information.</p>
+
+
+
+<p>You can set your rTorrent client to send any string you want to make it look
+like another client. You can choose one of the client ID's below or just make
+something up. As long as the string is in the correct format it does not
+matter; for example -UU1234- for Unknown v1.2.3.4. Here are a few examples of
+valid peer_id strings:
+
+<pre class="code">
+peer_id (PEER_NAME)    User-Agent String:       USER_AGENT:
+
+  -AZ3022-             Azureus 3.0.2.2          Azureus/3022
+  -BC0091-             BitComet 0.0.9.1         BitComet/0091
+  -BF1355-             BitFlu 1.3.5.5           BitFlu/1355
+  -UT1610-             uTorrent 1.6.1.0         uTorrent/1610
+  -UU1234-             Unknown 1.2.3.4          Unknown/1234
+</pre>
+</p>
+
+<p>The peer_id is exactly 20 bytes (characters) long.  There are mainly two
+conventions how to encode client and client version information into the
+peer_id, Azureus-style and Shadow's-style. rTorrent uses the Azureus-style
+client peer_id string format. Clients like BitLord use Shadow's-style.</p>
+
+<p>Azureus-style uses the following encoding: '-', two characters for client
+id, four ascii digits for version number, '-', followed by random numbers.  For
+example: '-AZ2060-'.  The known clients that uses this encoding style are:
+
+<pre class="code">
+Clients using Azureus-style format:
+
+ 'AG' - Ares
+ 'A~' - Ares
+ 'AR' - Arctic
+ 'AV' - Avicora
+ 'AX' - BitPump
+ 'AZ' - Azureus
+ 'BB' - BitBuddy
+ 'BC' - BitComet
+ 'BF' - Bitflu
+ 'BG' - BTG (uses Rasterbar libtorrent)
+ 'BR' - BitRocket
+ 'BS' - BTSlave
+ 'BX' - ~Bittorrent X
+ 'CD' - Enhanced CTorrent
+ 'CT' - CTorrent
+ 'DE' - DelugeTorrent
+ 'DP' - Propagate Data Client
+ 'EB' - EBit
+ 'ES' - electric sheep
+ 'FT' - FoxTorrent
+ 'GS' - GSTorrent
+ 'HL' - Halite
+ 'HN' - Hydranode
+ 'KT' - KTorrent
+ 'LH' - LH-ABC
+ 'LP' - Lphant
+ 'LT' - libtorrent
+ 'lt' - libTorrent (rtorrent)
+ 'LW' - LimeWire
+ 'MO' - MonoTorrent
+ 'MP' - MooPolice
+ 'MR' - Miro
+ 'MT' - MoonlightTorrent
+ 'PD' - Pando
+ 'qB' - qBittorrent
+ 'QD' - QQDownload
+ 'QT' - Qt 4 Torrent example
+ 'RT' - Retriever
+ 'S~' - Shareaza alpha/beta
+ 'SB' - ~Swiftbit
+ 'SS' - SwarmScope
+ 'ST' - SymTorrent
+ 'st' - sharktorrent
+ 'SZ' - Shareaza
+ 'TN' - TorrentDotNET
+ 'TR' - Transmission
+ 'TS' - Torrentstorm
+ 'TT' - TuoTu
+ 'UL' - uLeecher!
+ 'UT' - µTorrent
+ 'WT' - BitLet
+ 'WY' - FireTorrent
+ 'XL' - Xunlei
+ 'XT' - XanTorrent
+ 'XX' - Xtorrent
+ 'ZT' - ZipTorrent 
+</pre>
+</p>
+
+<p>If you would like to see more example peer_id 's and an explanation of what
+each client considers a valid id then check out the <a
+href="http://wiki.theory.org/BitTorrentSpecification#peer_id">BitTorrent
+Specifications.</a>
+
+
+
+<p>In this exercise we will change the client id, known as the peer_name and
+also the user-agent our client sends to the outside world. In this way one can
+tailor the name to any client id the tracker server will accept.</p>
+
+
+<p>Change the client's name also known as the peer_id (peer_name). The
+peer_name is how out client identifies itself to other clients.
+
+<pre class="code">
+# Report our client's identity as DelugeTorrent v1.2.3.4
+
+edit file:  vi libtorrent-0.12.5/configure
+ old line #:2092 #define PEER_NAME "-lt0C30-"
+ new line #:2092 #define PEER_NAME "-DE1234-"
+
+ old line #:2097 #define PEER_VERSION "lt\xOC\x30"
+ new line #:2097 #define PEER_VERSION "DE\x12\x34"
+
+-OR-
+
+edit file:  vi libtorrent-0.12.3/configure
+ old line #:2095 #define PEER_NAME "-lt0C30-"
+ new line #:2095 #define PEER_NAME "-DE1234-"
+
+ old line #:2100 #define PEER_VERSION "lt\xOC\x30"
+ new line #:2100 #define PEER_VERSION "DE\x12\x34"
+
+-OR-
+
+edit file:  vi libtorrent-0.11.9/configure
+ old line #:1956 #define PEER_NAME "-lt0B01-"
+ new line #:1956 #define PEER_NAME "-DE1234-"
+</pre>
+
+<p>Change the User-Agent string. The user-agent (USER_AGENT) is the HTTP string
+sent to the tracker saying what kind of client we are using. This string id how
+our client identifies itself to the tracker.
+
+<pre class="code">
+# Report our User-Agent as uTorrent in HTTP get call
+
+edit file :  vi rtorrent-0.8.5/configure
+ old line #:18006 #define USER_AGENT std::string(PACKAGE "/" VERSION "/") + torrent::version()
+ new line #:18006 #define USER_AGENT "DelugeTorrent/1234"
+
+-OR-
+
+edit file :  vi rtorrent-0.8.3/configure
+ old line #:22706 #define USER_AGENT std::string(PACKAGE "/" VERSION "/") + torrent::version()
+ new line #:22706 #define USER_AGENT "DelugeTorrent/1234"
+
+-OR-
+
+edit file :  vi rtorrent-0.7.9/configure
+ old line #:22596 #define USER_AGENT std::string(PACKAGE "/" VERSION "/") + torrent::version()
+ new line #:22596 #define USER_AGENT "DelugeTorrent/1234"
+</pre>
+</p>
+
+
+
+<h2>Changing the amount of hosts to upload to.</h2>
+
+<p>The rTorrent client is limited in how many remote clients you can upload to.
+If you have 50KB/sec of upload bandwidth rTorrent is throttled to then you will
+be limited by the author's equation "(10 + throttle / 5)" or (10+50)/5 = 12
+clients.  This is approximately 4.12 KB/sec for each client.</p>
+
+<p>BTW, we recommend reserving at least 5 KB/sec upload bandwidth per upload
+slot. We would set the line to read, "maxUnchoked = throttle / 5;" for
+example.</p>
+
+<p>For the sake of this example, lets say you want to increase the number of
+clients you can upload to. This way you can share with as many people as
+possible. We will change the amount of upload slots to 50 clients each getting
+2KB/sec. The value you specify for "upload_rate" in the .rtorrent.rc file will
+be double the amount of clients you can actively upload to. So, an
+"upload_rate=50" allows 25 uploads slots and an "upload_rate=100" equals 50
+upload slots. It is not recommended to upload any less then 2KB/sec as the
+returns by the remote client diminish the slower you upload. In fact the remote
+client might just ban you for being too slow.</p>
+
+<p>Lastly, for every upload slot you allow you need a chunk's worth of ram in
+the system to cache the chunks. If the current torrent your are uploading has a
+chunk size of 4 megabytes then you would need (4MB*50slots)=200 megabytes of
+RAM for rTorrent to use. Chunk sizes per torrent range from 256KB to around 8
+megabytes.</p>
+
+
+<pre class="code">
+# how many uploads to allow. Target is 2KB/s per upload slot.
+
+edit file:  vi rtorrent-0.8.5/src/ui/root.cc
+ old line #:184  maxUnchoked = 10 + throttle / 5;
+ new line #:184  maxUnchoked = throttle / 2;
+   -and-
+ old line #:214  maxUnchoked = 10 + throttle / 5;
+ new line #:214  maxUnchoked = throttle / 2;
+
+-OR-
+
+edit file:  vi rtorrent-0.8.3/src/ui/root.cc
+ old line #:233  maxUnchoked = 10 + throttle / 5;
+ new line #:233  maxUnchoked = throttle / 2;
+
+-OR-
+
+edit file:  vi rtorrent-0.7.9/src/ui/root.cc
+ old line #:232  maxUnchoked = 10 + throttle / 5;
+ new line #:232  maxUnchoked = throttle / 2;
+</pre>
+</p>
+
+
+<p>
+<div class="note"> 
+<b>Want more speed? Make sure to also check out the <a
+href="/network_performance.html">Network Speed and Performance Guide</a>. With
+a little time and understanding you could easily double your firewall's
+throughput.</b>
+</div>
+</p>
+
+
+
+<h2>Disconnect idle clients quickly.</h2>
+
+<p>Many remote clients connecting to your client will stay connected and not
+transfer anything. This is not a bug, but a feature of the bittorrent
+protocol.</p>
+
+<p>In theory a client can connect and stay connected until either you have a
+set of data they need or they have a slot open to give data to you. Though this
+is a more efficient method of waiting for new data to become available it is
+not really necessary. Most remote clients today are very aggressive and will
+reconnect if your drop them.  The reason for a short timeout is to clear out
+the connection queue to your client opening space for clients who may transfer
+data now and freeing up system memory.</p>
+
+<p>If the remote system is not doing anything then drop them. Lets say our
+general rule is a client will be disconnected after 40 seconds of inactivity.
+
+
+<pre class="code">
+# How long to wait till we disconnect a client. Target is 40 secs idle.
+
+edit file:  vi libtorrent-0.12.5/src/protocol/peer_connection_leech.cc
+ old line #:115  if (cachedTime - m_timeLastRead &gt; rak::timer::from_seconds(240))
+ new line #:115  if (cachedTime - m_timeLastRead &gt; rak::timer::from_seconds(40))
+
+-OR-
+
+edit file:  vi libtorrent-0.12.3/src/protocol/peer_connection_leech.cc
+ old line #:114  if (cachedTime - m_timeLastRead &gt; rak::timer::from_seconds(240))
+ new line #:114  if (cachedTime - m_timeLastRead &gt; rak::timer::from_seconds(40))
+
+-OR-
+
+edit file:  vi libtorrent-0.11.9/src/protocol/peer_connection_leech.cc
+ old line #:93  if (cachedTime - m_timeLastRead &gt; rak::timer::from_seconds(240))
+ new line #:93  if (cachedTime - m_timeLastRead &gt; rak::timer::from_seconds(40))
+</pre>
+
+<p>Now you are dropping clients quickly on the back end of rTorrent so lets
+make sure the ncurses GUI updates a bit quicker so we can monitor the changes.
+In rTorrent a "tick" is 30 seconds. By default the GUI updates every 4 ticks or
+2 minutes so we will change that to 1 tick or every 30 seconds.</p>
+
+<pre class="code">
+# How long to wait to clear dead connections from the ncurses GUI
+
+edit file:  vi libtorrent-0.12.5/src/download/download_wrapper.cc
+ old line #:272  if (ticks % 4 == 0) {
+ new line #:272  if (ticks % 1 == 0) {
+
+-OR-
+
+edit file:  vi libtorrent-0.12.3/src/download/download_wrapper.cc
+ old line #:272  if (ticks % 4 == 0) {
+ new line #:272  if (ticks % 1 == 0) {
+
+-OR-
+
+edit file:  vi libtorrent-0.11.9/src/download/download_wrapper.cc
+ old line #:295  if (ticks % 4 == 0) {
+ new line #:295  if (ticks % 1 == 0) {
+</pre>
+</p>
+
+
+
+<h2>Decrease the time delay when your client connects to the trackers</h2>
+
+<p>rTorrent will normally limit the time between connections to the tracker to
+1800 seconds or 30 minutes. You may think this is too long and may want to
+change it to 600 seconds or 10 minutes. This way your client will go out every
+600 seconds and get more client ips from the tracker to connect with. It is not
+recommended to set this value under 120 seconds as the tracker will probably
+consider it abusive. On a related note, make sure your client takes advantage
+of the <a
+href="http://en.wikipedia.org/wiki/Distributed_hash_table">distributed hash
+table (DHT)</a> support which would allow you to be a backup tracker when all
+other trackers are down or can not deliver enough peers, as well as enabling
+tracker-less torrents.
+
+
+<pre class="code">
+# Decrease the polling time to connect to trackers
+
+edit file:  vi libtorrent-0.12.5/src/torrent/tracker.cc
+ old line #:49  m_normalInterval(1800),
+ new line #:49  m_normalInterval(600),
+
+edit file:  vi libtorrent-0.12.5/src/torrent/tracker.h
+ old line #:100 void set_normal_interval(int v) { if (v &gt;= 60 && v &lt;= 3600) m_normalInterval = v;}
+ new line #:100 void set_normal_interval(int v) { if (v &gt;= 60 && v &lt;= 600) m_normalInterval = v;}
+
+-OR-
+
+edit file:  vi libtorrent-0.12.3/src/torrent/tracker.cc
+ old line #:49  m_normalInterval(1800),
+ new line #:49  m_normalInterval(600),
+
+edit file:  vi libtorrent-0.12.3/src/torrent/tracker.h
+ old line #:99  void set_normal_interval(int v) { if (v &gt;= 60 && v &lt;= 3600) m_normalInterval = v;}
+ new line #:99  void set_normal_interval(int v) { if (v &gt;= 60 && v &lt;= 600) m_normalInterval = v;}
+
+-OR-
+
+edit file:  vi libtorrent-0.11.9/src/tracker/tracker_base.h
+ old line #:66  m_normalInterval(1800),
+ new line #:66  m_normalInterval(600),
+
+ old line #:102  void set_normal_interval(int v) { if (v &gt;= 60 && v &lt;= 3600) m_normalInterval = v;}
+ new line #:102  void set_normal_interval(int v) { if (v &gt;= 60 && v &lt;= 600) m_normalInterval = v;}
+</pre>
+</p>
+
+
+
+<h2>Increase the rate at which pieces are requested from other peers</h2>
+
+<p>rtorrent is very conservative when requesting pieces or chunks from remote
+peers. A modest increase in the number and frequency will help our torrents get
+up to speed faster and maintain a consistently faster speed overall.</p>
+
+<p>This modification will have rTorrent request a chunk from non-sharing peer
+every 60 seconds instead on the default 3 minutes. The default value of "6"
+means 6 ticks and a rTorrent tick equals 30 seconds. This is way too long.
+Let's say if more than 2 ticks have gone by (60 seconds) we can assume the peer
+forgot about our requests or tried to cheat with empty piece messages, so we
+will ask again. Sadly, rtorrent does not have a built in mechanism to kick
+peers who do not share at all.</p> 
+
+
+<pre class="code">
+# Increase the rate at which pieces are requested from other peers
+
+edit file:  vi libtorrent-0.12.5/src/protocol/peer_connection_leech.cc
+ old line #:154  if (!download_queue()-&gt;canceled_empty() && m_downStall &gt;= 6)
+ new line #:154  if (!download_queue()-&gt;canceled_empty() && m_downStall &gt;= 2)
+
+-OR-
+
+edit file:  vi libtorrent-0.12.3/src/protocol/peer_connection_leech.cc
+ old line #:153  if (!download_queue()-&gt;canceled_empty() && m_downStall &gt;= 6)
+ new line #:153  if (!download_queue()-&gt;canceled_empty() && m_downStall &gt;= 2)
+
+-OR-
+
+edit file:  vi libtorrent-0.11.9/src/torrent/tracker.cc
+ old line #:127  if (m_downStall &gt; 6)
+ new line #:127  if (m_downStall &gt; 2)
+</pre>
+</p>
+
+
+
+<h2>How can we kick leechers and uncooperative peers who do not send us data ?</h2>
+
+<p>Bittorrent clients are inherently self serving. Users want to get the data
+as fast as possible and they do not always care if they give anything back.
+These are called "leechers." Think of a remote client who connects to you and
+only downloads and never gives anything back; like BitThief. This is not only
+annoying, but also hurts the community as a whole.</p>
+
+<p>Then we have the misconfigured clients who are setup to upload, but at a
+painfully slow rate like 0.1 KB/sec. These owners might think that if they can
+upload even a little bit of data the remote side will continue to send them
+data. These type of clients are called "scammers" as they give as little as they
+can to scam the remote side for as much bandwidth as possible.</p>
+
+<p>Finally, we have clients which are misconfigured to offer a 1000 upload slots
+while only having 30 KB/sec upload bandwidth available. Just because you are
+uploading it does not mean you are helping the community. It is a good idea to
+dedicate a least 4 KB/sec upload bandwidth per upload slot. Otherwise you are
+just wasting every ones' time. So, if you have 50 KB/sec of upload bandwidth we
+suggest only allowing 12 upload slots ( (10+50)/5 ) which is the default
+amount of upload slots in rTorrent.</p>
+
+<h3>What can we do about all the leechers, scammers and abusers ?</h3>
+
+<p>Let's setup some ground rules to stop what we will consider abusive client
+behavior. First, if you do not share with me at least a small percentage of
+what I send to you, I will not share with you. If I set my ratio at 1/4 then I
+expect 1 byte of data for every 4 bytes I give to you.  In fact, we can go so
+far as to say we will ban clients who abuse our upload generosity and "snub"
+them. BTW, to "snub" is to deny sending data to an abusive client while
+accepting their download to us. It is useful to snub a client so they can get
+their upload ratio back in line with our rules.</p>
+
+<p>The problem now is knowing that rTorrent does not have a kicking or banning
+function. What we need is a third party patch!</p>
+
+<h3>What does the bad_peer_handling.diff do ?</h3>
+
+<p>This is an incredibly powerful set of features you can add to rTorrent. Here
+is an explanation of the patch (diff) from the author:</p>
+
+
+<pre class="code">
+Automated handling of leechers and other uncooperative peers.
+
+  original author  :  Josef Drexler
+  patch name       :  bad_peer_handling.diff
+  supported version:  rTorrent 0.8.5 / libtorrent 0.12.5
+
+Adds the following commands:
+
+d.snub_leechers=snub_ratio,unsnub_ratio,min_transfer
+ Snub peers (i.e. stop uploading to them) who download far more than they
+ upload. They're snubbed when their ratio exceeds the snub_ratio, and unsnubbed
+ when they drop below the unsnub_ratio again. For example, a snub_ratio of 10
+ means the peer gets snubbed if we send more than ten times the amount that
+ we've received from them. Don't set snub_ratio too low, a value of 5-10 seems
+ to work best. The first min_transfer bytes is uploaded for "free" without
+ snubbing.
+
+d.unsnub_peers=
+ Unsnub all snubbed peers, e.g. for use when the download is
+ finished and we no longer have anything we want to download anyway.
+
+d.ban_slow_peers=min_seeds,min_rate,amount1,time1[,amount2,time2[,...]]
+ Ban peers whose upload is too slow, for instance hacked peers, badly throttled
+ connections or ISPs with excessive bandwidth shaping. This clears up the peer
+ list and allows connecting to better peers, to prevent staying connected
+ forever to peers that never send data.  Always keeps at least the set min_peers
+ for the download, and at least as many seeds as min_seeds as well as all peers
+ currently sending at a rate of min_rate or above. A peer is too slow if after
+ time1 has elapsed, it has sent less than amount1, or amount2 after time2, etc.
+
+d.unban_peers=
+ Unban all peers, including those banned manually with shift-B.
+
+Note that peers marked as friends (if you have applied that patch) will never
+be snubbed or banned by these commands.
+
+There are also global "snub_leechers" and "ban_slow_peers" commands which take
+the same arguments and apply them to all unfinished downloads (except those set
+to ignore commands).
+
+Note that the commands usually don't work well for poorly seeded torrents or
+those being seeded initially, then unreasonably many peers will be
+snubbed/banned. You should set the ignore_commands flag for such downloads, or
+avoid using the global commands and instead only apply the download-specific
+commands to the particular downloads that need them (e.g.  using d.multicall on
+a custom view that only contains appropriate downloads).
+
+The following are added to your .rtorrent.rc
+
+Example: (this seems to work fine for a typical FIOS line)
+ schedule = snub_leechers,120,120,"snub_leechers=10,5,1M"
+ schedule = ban_slow_peers,120,120,"ban_slow_peers=5,2K,64K,5,128K,10,1M,30"
+ system.method.set_key = event.download.finished,unban,"d.unban_peers="
+ system.method.set_key = event.download.finished,unsnub,"d.unsnub_peers="
+
+Snub peers after sending 1MB to them if they don't upload at least 1/10th in
+return.  Unsnub them when they upload to a ratio of 1/5th, and when the
+download finishes.
+
+Ban peers after 5 minutes unless they've uploaded less than 64KB, after 10 min
+and less than 128 K or after 30 min and under 1MB upload. Keep at least 5
+seeds, and all peers currently uploading at 2KB/s or faster.  Unban peers when
+the download finishes.
+</pre>
+</p>
+
+
+<h3>Building rTorrent from source with the diff</h3>
+
+<p>In order to use the kicking and banning feature set we need to apply a patch
+to the source code. The patch is called a diff. This diff is made by <a
+href="http://ovh.ttdpatch.net/~jdrexler/rt/experimental/">jdrexler</a> and can
+be found on his site. This is an excellent set of code and is written quite
+well.</p>
+
+<p>In order to keep from duplicating source code building examples on this
+page, take a look at the next section called, "Installing rTorrent on OpenBSD
+with DHT, Encryption and Banning support".</p>
+
+<h3>Applying the bad_peer_handling options to the .rtorrent.rc</h3>
+
+<p>Once you have built rTorrent with the bad_peer_handling.diff you can add the
+following to your .rtorrent.rc file. Take a look at the comments to get an
+explanation of each of the schedule lines.</p>
+
+
+<pre class="code">
+############ ban peers patch ###################
+# Snub peers after sending 1 MB to them if they don't upload at least 1/10th in
+# return (100KB). Unsnub them when they upload to a ratio of 1/5th, and when
+# the download finishes. Check all peers every 30 seconds.
+#
+## d.snub_leechers=snub_ratio,unsnub_ratio,min_transfer
+schedule = snub_leechers,30,30,"snub_leechers=10,5,1M"
+#
+# Ban peers after 2 minutes if they've uploaded less than 64KB, after 3 min
+# with less than 128 K or after 5 min with under 1MB upload. Keep at least 5
+# seeds, and all peers currently uploading at 2KB/s or faster. Check all peers
+# every 90 seconds.
+#
+## d.ban_slow_peers=min_seeds,min_rate,amount1,time1[,amount2,time2[,...]]
+schedule = ban_slow_peers,90,90,"ban_slow_peers=5,2K,64K,2,128K,3,1M,5"
+#
+## unsnub and unban on completion of torrent
+system.method.set_key = event.download.finished,unban,"d.unban_peers="
+system.method.set_key = event.download.finished,unsnub,"d.unsnub_peers="
+############ ban peers patch ###################
+</pre>
+</p>
+
+
+
+<h2>Installing rTorrent on OpenBSD with DHT, Encryption and Banning support</h2>
+
+<p>rTorrent is an accomplished client. It fashions a ncurses front end written in
+C. This is very CPU efficient and can be used in conjunction with "screen" or
+"tmux" when you want to access the program remotely. Building the client with
+<a href="http://en.wikipedia.org/wiki/Distributed_hash_table">distributed hash
+table (DHT)</a> support allows you to be a backup tracker when all other
+trackers are down or can not deliver enough peers, as well as enabling
+tracker-less torrents. This is useful when trackers are unavailable or
+hopelessly slow. Encryption support is helpful when your ISP is traffic shaping
+or you wish to keep your traffic out of the public eye.</p>   
+
+<p>We are going to build rTorrent from source on the latest stable release of
+OpenBSD. We will use the version of OpenSSL that comes with OpenBSD since we
+expect this to be a securely audited revision. These steps are easy and quite
+straight forward. On a AMD64 2GHz it takes about 10 minutes to build everything
+from source.</p>
+
+<p><b>Download and untar: </b> First, you need to download rTorrent and
+libtorrent from <a
+href="http://libtorrent.rakshasa.no/">libtorrent.rakshasa.no</a>. When they
+finish downloading untar the tarballs.  
+
+
+<pre class="code">
+## Download
+wget http://libtorrent.rakshasa.no/downloads/rtorrent-0.8.5.tar.gz
+wget http://libtorrent.rakshasa.no/downloads/libtorrent-0.12.5.tar.gz
+
+## Untar
+tar zxvf rtorrent-0.8.5.tar.gz
+tar zxvf libtorrent-0.12.5.tar.gz
+</pre>
+
+</p>
+
+<p><b>Install libsigc++ and curl: </b>rTorrent will need the libraries from
+libsigc++ (v2.0 or above) and the program curl. Use the OpenBSD package
+manager, "pkg_add" to install both of these packages from the on-line
+repository. 
+
+
+<pre class="code">
+pkg_add -i curl
+pkg_add -i libsigc++
+</pre>
+
+</p>
+
+<p><b>Set the OPENSSL environment: </b>In order for libtorrent to build with
+OpenSSL support it needs to know where OpenBSD has put its libraries. Use the
+following to setup your OpenSSL environment. Note: if you get the error,
+"rtorrent:/usr/lib/libssl.so.15.1: rtorrent : WARNING: symbol(ssl2_ciphers)
+size mismatch, relink your program" you may have a problem with your ssl libs.
+This error was shown after we installed OpenSSL v1.0.0 in error and over wrote
+the built in libs. If you use the version of OpenSSL that comes with OpenBSD
+like this example does then you will not have a problem.
+
+
+<pre class="code">
+## for a bash or ksh shell
+export OPENSSL_CFLAGS=-I/usr/include
+export OPENSSL_LIBS=-lcrypto 
+</pre>
+
+</p>
+
+
+</p>
+
+<p><b>OPTION 1: Edit the source code with any mods or hacks from the beginning
+of this page: </b>Now is the time to edit the source code if you choose. You
+can change the upload ratio reported to the tracker or change the peer name
+reported to other clients. We have many options listed above.</p>    
+
+<p><b>OPTION 2: Add automated handling of leechers and other uncooperative
+peers: </b> The patch called, <a
+href="http://ovh.ttdpatch.net/~jdrexler/rt/experimental/bad_peer_handling.diff">bad_peer_handling.diff</a>
+will allow us to add rule to kick and ban leechers and un-cooperative remote
+clients. We _highly_ recommend it.
+
+
+<pre class="code">
+## Download the patch
+wget http://ovh.ttdpatch.net/~jdrexler/rt/experimental/bad_peer_handling.diff
+
+## The patch is looking for directories called rtorrent and libtorrent.
+## We can make symlinks to our untar'd copies of the directories.
+ln -s rtorrent-0.8.5 rtorrent 
+ln -s libtorrent-0.12.5 libtorrent
+
+## Apply the patch
+patch -p0 &lt; bad_peer_handling.diff
+
+## If the patch is successful you should see a bunch of "chunk succeeded" messages.
+</pre>
+
+</p>    
+
+<p><b>Build libtorrent: </b>Change to the libtorrent source code directory and
+execute the following line to build the libtorrent source:
+
+
+<pre class="code">
+cd libtorrent-0.12.5
+./configure && make && make install
+</pre>
+
+</p>
+
+<p><b>Build rtorrent: </b>Change to the rtorrent source code directory and 
+execute the following line to build the rtorrent source:
+
+
+<pre class="code">
+cd rtorrent-0.8.5
+./configure && make && make install
+</pre>
+
+</p>
+
+<p>All done. Congratulations. You now have a rTorrent client built against
+OpenBSD's version of OpenSSL. You can now talk to other clients with an
+encrypted handshake and transfer data using RC4 encryption. The newest version
+of rTorrent also has <a
+href="http://en.wikipedia.org/wiki/Distributed_hash_table">distributed hash
+table (DHT)</a> support allowing you to use tracker-less torrents or to share a
+list of good peers with other DHT clients. Take a look at the following
+sections for the .rtorrent.rc configuration file and tips on making rTorrent
+easier to use from a remote location using "screen" or "tmux".</p>
+
+
+
+
+<h2>Increasing rtorrent's ease of use</h2>
+
+
+
+<h3>Screen or Tmux - Virtual terminal</h3>
+
+<p>We find the best way to use rtorrent and access it remotely
+though ssh is to use "screen" "or "tmux". These will allow you to start a
+virtual terminal and bring it up in a xterm or through a remote ssh connection.
+You can then start rtorrent while inside of the screen session.</p>
+
+<p>Screen's advantages come in the fact that it is not tied to a terminal. You
+can detach the session and it will continue to run. If you loose your
+connection, screen will auto-detach and continue to run the program. Screen not
+only increases the usability to rtorrent, but also acts like a safety net if
+you loose connectivity.</p>
+
+<p>Start screen by typing "screen" and it will run in the current terminal.
+Now, execute rtorrent in screen's virtual terminal. To detach the screen
+session type "Ctrl-a" and then "d". That is, hold down "control" and the letter
+"a" together and then release Ctrl-a and press the letter "d". To re-attach the
+screen session type "screen -x".</p>
+
+<p>The advantage of "screen -x" is you can have multiple views of the same
+screen session and all of them will update at the same time. This is useful if
+you already have an open rtorrent screen session on the local machine and also
+want to see the same virtual terminal through a ssh session. Screen has many
+more options so check in the man pages if you want to do more.
+
+<pre class="code">
+Screen in review
+  start screen: screen
+  detach screen: Ctrl-a d
+  re-attach screen : screen -x
+
+Tmux in review
+  start screen: tmux
+  detach screen: Ctrl-b d
+  re-attach screen : tmux -x
+</pre>
+
+</p>
+
+
+<h3>Allow more open files</h3>
+
+<p>Using the following alias on OpenBSD will allow rtorrent to open
+more file descriptors (-n) and max user processes (-u) than the default shell
+normally allows. This allows you to handle more clients and larger sets of
+files if you need to. You can see what limits your shell is currently running
+with by typing "ulimit -a".
+
+<pre class="code">
+alias rt_start='ulimit -n 512;ulimit -u 128;rtorrent'
+</pre>
+
+</p>
+
+
+<h3>Limit connections per client (3 connections per 300 seconds per ip)</h3>
+
+<p>The current generation of bittorrent clients like BitTornado,
+uTorrent, and BitComet are very aggressive. They will try to connect to your
+system many times per second to take up as many slots as possible. They were
+designed with one purpose, to try to get data as fast a possible for their
+owner. This naturally means they do not care how much load they put on your
+connection, machine or torrent client.
+
+<p>To combat this we recommend limiting remote clients to a total of 3
+connections per 300 seconds per ip address in your firewall. This may sound
+restrictive, but remember, there are many clients our there and less than half
+actually want to share data with you. Most want to only download. We are
+looking for those clients dedicated enough to connect and continuously share
+data with us. otherwise we disconnect them and they can wait around 300 seconds
+to connect again.</p>
+
+<p>This is pf STO (stateful tracking options) we used during testing:
+<pre class="code">
+rTorrentSTO ="(max 250, source-track rule, max-src-conn 1, max-src-nodes 250, max-src-conn-rate 3/300)"
+</pre>
+</p>
+
+<p>You can limit clients to 3 connections per 300 seconds with either Pf on
+OpenBSD/FreeBSD or in iptables on Linux. If you need more examples of PF rules
+or an explanation of the following anchor, check out the <a
+href="/pf_config.html">Calomel.org PF config page</a>.</p>
+
+<p>This is the full PF anchor we used during testing:
+<pre class="code">
+#
+## rTorrent anchor :: https://calomel.org
+#
+################ Macros ###################################
+### Interfaces ###
+ ExtIf="em0"
+
+### Ports ###
+ BitTor="23333"
+
+### States & Queues ###
+ SynState="flags S/SAFR synproxy state"
+
+### Stateful Tracking Options ###
+ BitTorSTO ="(max 250, source-track rule, max-src-states 1, max-src-nodes 250, max-src-conn-rate 3/300)"
+
+################ Translation and Filtering ###############################
+
+### $ExtIf inbound
+ pass in log on $ExtIf inet proto tcp from !($ExtIf) to ($ExtIf) port $BitTor $SynState $BitTorSTO queue bittor rdr-to lo0 label "bittor"
+
+####### EOF #######
+</pre>
+</p>
+
+<p>In testing we did _not_ experience a drop in download or upload speeds over
+the long term with these settings. The torrent did take about 10 minutes longer
+to get to full speed once started, but our client was more responsive to
+connecting clients due to the lower load and was able to start sharing with
+them more quickly. The aggressive clients will still hit the firewall over and
+over again even if they can not connect. For example, a typical client tried to
+connect to our testing machine an average of 24 times a minute and aggressive
+clients attempted 143 connections per minute. We found that all remote clients
+would return no matter if we blocked them or not as long as they were able to
+connect successfully once in a while.</p>
+
+  </p>
+
+
+<p>
+<div class="note"> 
+<b>Want to use Wake on LAN (WOL)? Take a look at our <a
+href="/wakeonlan.html">Wake On LAN (WOL) "How to"</a>. You can tell a remote
+system that is soft-off to boot from any other system on the network.</b>
+</div>
+</p>
+
+
+<h2>The .rtorrent.rc configuration file</h2>
+
+<p>This is the .rtorrent.rc config file we used for testing if you need it. It
+is placed in the home directory of the user that runs rTorrent.  These are the
+basics and you are welcome to check out the man page for the specifics. The
+following will at least allow you to test out the above exercises. The values
+in the directives hash_interval, hash_max_tries and hash_max_tries are set to
+make OpenBSD clients a bit faster, but are not necessary if check_hash is set
+to "no". You may not need these values set for other OS's.
+
+
+<pre class="code">
+#######################################################
+###  Calomel.org .rtorrent.rc  BEGIN
+#######################################################
+#
+## listen on interface
+ bind = 127.0.0.1
+#
+## working directory
+ directory = /rtorrent/
+#
+## do not check torrent when finished
+ check_hash = no
+#
+## OpenBSD check_hash speedup
+# hash_read_ahead = 8
+# hash_interval = 10
+# hash_max_tries = 2
+#
+## max amount of torrent files to keep in memory (reduces hard drive load)
+ max_open_files = 256
+#
+## max amount of clients that we will upload to. It is advisable to upload
+## no less than 2KB/s per client. If we allow 100KB/sec max upload speed
+## then we should allow no more then 50 upload slots per torrent.
+ max_peers = 50
+#
+## max total upload rate in KB (kilobytes) to remote clients
+ upload_rate = 100
+#
+## max uploads slots per completed torrent open to clients
+ max_peers_seed = 20
+#
+## max upload slots total for all torrents open to clients
+ max_uploads = 100
+#
+## max connections we will make to others (0=listen only)
+ min_peers = 20
+#
+## max connections we will make to others for completed torrents
+ min_peers_seed = 20
+#
+## listen on the single port (port 9999 TCP)
+ port_range = 9999-9999
+#
+## DHT - distributed hash table (port 9999 UDP) 
+# dht = auto
+# dht_port = 9999
+#
+## Encryption - require incoming encrypted handshake and require encrypted
+## transmission after the initial encrypted handshake. Unencrypted clients
+## will be refused. BTW, most modern clients support encryption.
+# encryption = require, require_RC4
+#
+####### Use for rTorrent 0.8.4 and BEFORE only #######
+## upload at least 1% of the torrent in KB and close the torrent, check every 60 seconds
+# schedule = ratio,60,60,stop_on_ratio=1,0,1
+####### Use for rTorrent 0.8.4 and BEFORE only #######
+#
+####### Use for rTorrent 0.8.4 and AFTER only #######
+## upload at least 1% of the torrent in KB and close the torrent. Check when the torrent finishes.
+# ratio.enable=
+# ratio.min.set=1
+# ratio.max.set=1
+# ratio.upload.set=0M
+####### Use for rTorrent 0.8.4 and AFTER only #######
+#
+## watch for new .torrent files every 10 seconds in /rtorrent/.watch/
+ schedule = watch_directory,10,10,load_start=/rtorrent/.watch/*.torrent
+#
+## keep temp files in /rtorrent/.session/
+ session = /rtorrent/.session/
+#
+## save status to session file on torrent completion
+ session_on_completion = yes
+#
+## type of service (default=throughput)
+ tos=throughput
+#
+## udp trackers are not always firewall friendly
+ use_udp_trackers = no
+#
+############ bad_peer_handling.diff patch ###################
+# Snub peers after sending 1 MB to them if they don't upload at least 1/10th in
+# return (100KB). Unsnub them when they upload to a ratio of 1/5th, and when
+# the download finishes. Check all peers every 30 seconds.
+#
+## d.snub_leechers=snub_ratio,unsnub_ratio,min_transfer
+#schedule = snub_leechers,30,30,"snub_leechers=10,5,1M"
+#
+# Ban peers after 2 minutes if they've uploaded less than 64KB, after 3 min
+# with less than 128 K or after 5 min with under 1MB upload. Keep at least 5
+# seeds, and all peers currently uploading at 2KB/s or faster. Check all peers
+# every 120 seconds.
+#
+## d.ban_slow_peers=min_seeds,min_rate,amount1,time1[,amount2,time2[,...]]
+#schedule = ban_slow_peers,120,120,"ban_slow_peers=5,2K,64K,2,128K,3,1M,5"
+#
+## unsnub and unban on completion of torrent
+# system.method.set_key = event.download.finished,unban,"d.unban_peers="
+# system.method.set_key = event.download.finished,unsnub,"d.unsnub_peers="
+############ bad_peer_handling.diff patch ###################
+#
+#######################################################
+###  Calomel.org .rtorrent.rc  END
+#######################################################
+</pre>
+</p>
+
+
+
+
+<h2>Questions?</h2>
+
+<p><b>Should I limit upload bandwidth and connection slots for my torrents?</b>
+
+<p>A BitTorrent client normally uses multiple TCP connections and this gives it
+an unfair advantage when competing with other services for bandwidth, which
+exaggerates the effect of BitTorrent filling the upload pipe. The reason is
+because TCP distributes the available bandwidth evenly across all connections,
+and the more connections one application uses, the larger share of the
+bandwidth it gets.</p>
+
+<p>The traditional solution to this problem is to cap the upload rate of the
+BitTorrent client to 80% of the up-link capacity. 80% leaves some head room for
+interactive traffic like web browsing and checking mail for example.</p>
+
+<p>As for remote peers connecting you your client, it is highly advisable to
+limit everyone to one TCP connection per ip remote address. This keeps the few
+aggressive peers from taking up all of your available bandwidth and starving
+the remaining peers.</p>
+
+<p>By following these simple rules the advantages of uTorrent's uTP protocol,
+which is transport protocol layered on top of UDP, are mostly negated. You can
+continue to use TCP with all of its security advantages and bandwidth
+contention algorithms in a fair sharing model.</p>
+
+</p>
+
+<p><b>What does the error "Storage error: [File chunk write error: Cannot
+allocate memory.]" mean ? </b>This means rTorrent has exceeded the
+"Max memory usage" rTorrent was allocated. While rTorrent is running go to the
+"info" screen inside the torrent throwing the errors. Look for "Memory usage",
+which is how much memory the program is using right now, and "Max memory
+usage", which is the max memory rTorrent can use. If Memory usage exceeds the
+Max then this error is shown. Thankfully, this error does not seem to corrupt
+the torrent, but it will severely slow your download speeds as it drops data
+chunks when rTorrent exceeds its memory limit.</p>
+
+<p>To fix this error, find out how much memory the user running rTorrent is
+allowed to allocate by executing, "ulimit -m". Lets say the answer is 1024000
+or 1Gig. Lets allow rTorrent to allocate as much as 75% of 1 gigabyte or 768
+megabytes if it needs to. Just add the directive,
+
+<pre class="code">
+max_memory_usage = 805306368
+</pre>
+
+which is "768 * 1024 * 1024 = 805306368" to your .rtorrent.rc file.</p>
+
+<p>Lastly, if you already have increased the max_memory_usage directive as much
+as you can and you still get the error you have two options. (1) put more ram
+into your machine or (2) decrease the amount of clients you can upload (seed)
+to. On average rTorrent will use 2 megabytes of ram per upload slot. 50 upload
+slots will need about 50*2=100 megabytes of memory just for chunk
+caching.</p>
+
+<p><b>What does the error "Storage error: [File chunk write error: No such file
+or directory.]"  or "Storage error: [File chunk write error: Success.]" mean ?
+</b>Did you delete a file in the torrents directory, did a torrent
+file get corrupted or did you change the version of rtorrent while keeping the
+old torrent files around? Stop the download, highlight the torrent throwing the
+error and press Ctrl-E in the torrent list to force rtorrent to create any
+missing files again. This only work 20% of the time. If this does not work then
+you can consider the torrent file corrupt and you will have to delete all of
+the torrent files that throw this error and go get them again. This is the only
+action that has worked every time.</p>
+
+<p><b>Have you experienced machine LOCKUP's with rTorrent and OpenBSD
+?</b>No, we have not. People on the mailing list have experienced
+lockups of the OpenBSD box while using rTorrent, but we have never experienced
+this. We build rTorrent with the instructions above. We accept ssl handshakes
+and encrypted connections with other clients. We also use the ulimit options
+specified above. If you do have issues try using the single CPU kernel instead
+of the multi processor one. Finally, the issue might be hardware based like
+RAM, motherboard flakiness, power supply voltage issues or hard drive time
+outs. rTorrent activity can put more load on the machine and this might be just
+enough activity to weed out problematic hardware. </p>
+
+<p><b>How can I "sanitize" the file names of the downloaded
+files?</b>Many times the files you download in a torrent are named
+oddly by the person seeding the torrent. They may have spaces or capitalization
+or parenthesis which are not easy to work with on a UNIX system. Run the
+following script we call <b>sanitize_filenames.sh</b> to "sanitize" the file
+names. It will change all files in the current directory to lower case, all
+spaces will turn to underline "_", parenthesis into underline "_" and square
+brackets into underline "_".
+
+<pre class="code">
+### Calomel.org  sanitize_filenames.sh
+#
+for a in *; do
+     file=$(echo $a | tr A-Z a-z | tr ' ' _ | tr '(' _ | tr ')' _ | tr ',' _  | tr '[' _ | tr \' _ | tr ']' _ )
+     [ ! -f $file ] && mv "$a" $file
+done
+</pre>
+</p>
+
+<p><b>Can you tell me how inflate the upload ratio in Deluge?
+</b>An anonymous source sent the following code. This example will
+allow one to report nine times the true upload amount to trackers (upped*9;).
+Edit the file "http_tracker_connection.cpp" and edit the code starting with
+line 373. Just copy/paste the replacement code, build source and enjoy.
+<b>Remember:</b> This code is here to show the lack of proper security and
+verification of the BitTorrent protocol in communication between client and
+tracker servers. It is for research purposes only.
+
+<pre class="code">
+File: .../deluge-torrent-0.5.8/libtorrent/src/http_tracker_connection.cpp (Line #373)
+#
+#################################################
+Original Code:
+#################################################
+        if (!url_has_argument(request, "uploaded"))
+
+                                m_send_buffer += "uploaded=";
+                                m_send_buffer += boost::lexical_cast<std::string>(req.uploaded);
+                                m_send_buffer += '&';
+                        }
+#################################################
+Modified Code:
+#################################################
+                if (!url_has_argument(request, "uploaded"))
+                        {
+                                m_send_buffer += "uploaded=";
+                                signed long int upped = req.uploaded;
+                                signed long int reportup = upped*9;
+                                m_send_buffer += boost::lexical_cast<std::string>(reportup);
+                                m_send_buffer += '&';
+                        }
+</pre>
+</p>
+
+
+<hr>
+
+</div>
+
+<div class="boxiconbottom">
+
+<a href="/calomel_at.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAEQkAABEJABiazSuAAAAAd0SU1FB94DBhMdKSWVG6oAAAUvSURBVGje7ZlfiFZFGMZ/z3GtXSsQhYSUvMmrYiEkMSIMo0wzUKu1oKBSCDKkIAlSzjBDXiRRYRh0U2SQZK1G/w26qIx2A1GMUpAuoogukgQLV9bt6cKZPK677a647Sfse/Wd882Zef88877POwOTMimTMikTKQKo65qU0r8vQwiyrRbT1Skll4eis0IIxBjLy6WSFgIzbUtqDRtsI8nAUds9KaVPsqNPRyCEMN32e5IWAB3ND1sCJmc78gTwLbAixnhMdV1Pk7QLWAK4wKqFpei4B1hVAcuBJdnbuhj2bdZ1CbC8AtZfdJknQ8r2+krSfNsDkvoGhakVoYNtbPcBA5LmV0C7pH7bh2x/0MBYKxnhnNb/Bj6QdBjot91eZUXbgU5Jc4FV2Ri1QDR8BjX6wfY9wFzbndnxrsrGlVQBncBLkpZJWgv83HSB/4e86jNSnn8G1gLLJb0oqbNRoFQNqsrOFh4GpgKdtjfYPpI/Gm9oOXtbko4AGyR12p5q+xAwd3CqbxuCWljSpcA2YBFwP/AG8Iik5xpGaJyUx/bTwGvA75J2SOoCqqHWrYbjRznf3ifpO0mXxBi3ADNsdwN9DTT5AmCcPGc3MCOltEXSVEnf2b6vqdM5yoYQPIqqdxR4LMa4M1OPhbYfk/TgBfL+m8ArMcaePH8X8Aowc6RoV6Ngq84T7ajr+gWAGGOPpDW2rwW+HGP9cINnfWn7WttrivJ5jR2ZUI4I1ZEiMFQ0vgDujjEebVDbu4HngTmS2nIyoWQLn6a2BZangF8kPRVj7G5Q+BnArrzvRr3HqjGEWVmXRcDeuq5vKZQ2pdQtaZ6kx4GDmYqX6FlS6S8OSnpc0rwYY3cIoSi/CNg7VuXHGoEmNy+b7tmU0uZmQxRCuML2SknbgMvz+D+BdcDuGOPxZkMSQthoe5Ok9vPZPNVYPzjtzNN8RNI7wFndHHA8pbTd9ixgu6TttmfFGLcDx8ugxjfvSjp5vhltrBEo4f0JuDPG+H325qXAspTS7gKr0uU1MN7s/FYCH6eUTubn6yR9BFw9nhAq4/6yfXNK6UBe/BpJu4F5wGe2V6eUTjQVLr9DCB22dwK3AUeAFSmlH/OY621/JWnacDn/vA1opLMTwE0ppf0hhDbgDts7JXU0PNcHrAI+izEOZOWmALcDu2y3ZxhK0gmgy/anKaVTIYTrga9td+QeWBfCgDLRb7ZXpJR6QwhXAZuBhwaNcemYJL0NbMq/NwNdQ43N714HNsUYf63reqGk94BZo4FTNZqsA5wE7k0p9dZ1vRDotf3QoOg0uRTAaqBHUk/2MoMUahLDh4HeEMKClFIPcC9wcjTktxoJ85JOAUtjjHtDCBslfZMLVvlfw3ApcgWf2WgDhxtrYI7t3hDCMzHGr2wvy2v/Z3YaCUJ/2F6WWeGrwOJmkzFOLaMkfQ48ClwJfAxMH2sEDPQDK4EbgP3A4sbJxXicXqgR0FuBA8D8rEP/cM1UNVTCsd0PPAF0Sdoq6bIhDpjGuzO7DHgZuAd4MvftDDakbVBmkKSjtt8HHgBuHCe4jKbilzXXAd8Ab0m6q+yponNbpgTt2eoBSX2SVtueVjbqBB54FYffKKkTOAYMAFNKzamAfWWwpCnAbGBaI2tM5Gld6Y8LpGZn5Ytj91XA1gn28vkc8JaHrZWkD4E9jULT6lJgtQf4sFxwTM/le4HtjmGsntD7gebxuqRvM605dtFdcAA9McZzLjjO4u91XatltG/gpnnFNFTPMSmTMimT8v/LP3oN170fxuN4AAAAAElFTkSuQmCC" alt="Contact Us" title="Contact Us"></a>
+<a href="https://encrypted.google.com/search?&q=site%3Acalomel.org&btnG=Search"><img src="data:image/png;base64,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" alt="Google Site Search" title="Google Site Search"></a>
+<a href="/calomel_rss.xml"><img src="data:image/png;base64,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" alt="RSS Feed" title="RSS Feed"></a>
+<a href="https://profiles.google.com/101623135720127712698?rel=author"><img src="data:image/png;base64,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" alt="Google+" title="Google+"></a>
+
+</div>
+
+</body>
+</html>
